@@ -1,5 +1,5 @@
 ---
-title: 💜 Welcome to Amethyst!
+title: Welcome to my Digital Garden
 enableToc: false
 ---
 

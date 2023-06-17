@@ -1,4 +1,4 @@
-baseURL: https://amethyst.bencuan.me
+baseURL: https://stressed.dev/
 
 # Book configuration
 disablePathToLower: true
@@ -30,8 +30,8 @@ menu:
 
 params:
 
-  name: Ben Cuan
-  title: 📓 Amethyst
+  name: Miguel Pimentel
+  title: 🌴Stressed Silica🌴
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -41,7 +41,7 @@ params:
 
   # Enable rendering of LaTeX blocks
   # (surrounded by either single or double dollar signs)
-  enableLatex: true
+  enableLatex: false
 
   # whether to render titles for code blocks
   enableCodeBlockTitle: true
@@ -60,17 +60,17 @@ params:
   enableContextualBacklinks: true
 
   # whether to show a section of recent notes on the home page
-  enableRecentNotes: false
+  enableRecentNotes: true
 
   # whether to display an 'edit' button next to the last edited field
   # that links to github
-  enableGitHubEdit: true
+  enableGitHubEdit: false
 
   # whether to render mermaid diagrams
-  enableMermaid: true
+  enableMermaid: false
 
   # Link to your Github repo
-  GitHubLink: https://github.com/64bitpandas/amethyst
+  GitHubLink: https://github.com/datastring/amethyst
 
   # Search (WIP)
   search:
@@ -80,15 +80,15 @@ params:
 
   # Site description and title
   description:
-    Notes, hosted by bencuan
+    Notes, hosted by @datastring.
 
   
   # Footer links
   links:
     - link_name: Website
-      link: https://bencuan.me
+      link: https://miguelpimentel.do/
     - link_name: Blog
-      link: https://blog.bencuan.me
+      link: https://miguelpimentel.do/
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
@@ -110,7 +110,7 @@ params:
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/64bitpandas/amethyst
+  BookRepo: https://github.com/datastring/amethyst
 
   # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
   # commit hash for 'doc' page type.

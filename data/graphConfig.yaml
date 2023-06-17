@@ -7,7 +7,7 @@ enableGlobalGraph: true
 
 localGraph:
     enableLegend: false
-    enableDrag: true
+    enableDrag: false
     enableZoom: true
     depth: 1 # set to -1 to show full graph
     scale: 1.2
@@ -21,7 +21,7 @@ localGraph:
 
 globalGraph:
     enableLegend: false
-    enableDrag: true
+    enableDrag: false
     enableZoom: true
     depth: -1 # set to -1 to show full graph
     scale: 1.4
