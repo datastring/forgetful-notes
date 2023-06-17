@@ -1,0 +1,19 @@
+---
+title: Micropolitan Statistical Area
+bookHidden: true
+# bookToc: false
+# bookFlatSection: true
+# bookCollapseSection: true
+# bookComments: false
+# bookSearchExclude: false
+# draft: true
+# weight: 1
+---
+
+# Micropolitan Statistical Area
+
+Micropolitan Statistical Areas are labor market and statistical areas in the United States centered on an urban cluster with a population of at least 10,000 but fewer than 50,000 people.
+
+The designation was created in 2003 by the Office of Management and Budget (OMB). Micropolitan areas include the county where the urban cluster is and adjacent counties linked by commuting ties. The OMB has identified 543 micropolitan areas in the United States.
+
+<button class="bbutton" onclick="window.location.href=`/docs/lists/free-facts/`;"><span>Go back</span></button>
