@@ -30,11 +30,11 @@ Here's a list of all [setup-related notes](/tags/setup), which are also accessib
 
 ## What is a Digital Garden?
 
-A digital garden is a combination of an **online notebook** and a **personal wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [atomic notes](/docs/notes/atomic-notes/), and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
+A digital garden is a combination of an **online notebook** and a **personal Wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [[notes/atomic-notes|atomic-notes]] [atomic notes](/docs/notes/atomic-notes/), and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
 
 Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. Consistent work creating and maintaining a digital garden, eventually yields fruits. (pun intended)
 
-Taking raw notes is _useless_. Seed your garden with quality content and cultivate your curiosity. Plant seeds in your mind garden by taking smart personal notes. These don't need to be written in a publishable form.</p>
+Taking raw notes is _useless_. Seed your garden with quality content and cultivate your curiosity. Plant seeds in your mind garden by taking smart personal notes. These don't need to be written in a publishable form.
 
 Gardens are _explorable_, rather than structured as a strictly linear stream, of posts. They grow _slowly_ over time, rather than creating "_finished_" work that you never touch again. You revise, update, and change your ideas as they develop, and ideally find a way to indicate the "done-ness" state of your reader.
 

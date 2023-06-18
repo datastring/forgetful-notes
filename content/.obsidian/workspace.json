@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "93228e3d9c91c9fe",
+        "id": "870af3d869e9a35e",
         "type": "tabs",
         "children": [
           {
-            "id": "6eeba556aa50f81a",
+            "id": "11b25bcb68b6474e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -54,7 +54,7 @@
             }
           },
           {
-            "id": "187a0161324aae8a",
+            "id": "76fc9dbad95de869",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -131,26 +131,39 @@
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "6eeba556aa50f81a",
+  "active": "11b25bcb68b6474e",
   "lastOpenFiles": [
-    "setup/custom domain.md",
-    "features/section/first-page.md",
-    "features/section/second-page.md",
-    "features/section/_index.md",
     "learning/guitar/_index.md",
-    "features/_index.md",
-    "tasks.md",
-    "templates/_index.md",
-    "lists/_index.md",
-    "_index.md",
-    "learning/guitar/arpeggio.md",
+    "notes/Skullcandy Crusher ANC.md",
+    "notes/Serif.md",
+    "notes/Sans-serif.md",
+    "notes/Python.md",
+    "notes/MPV.md",
+    "notes/Micropolitan Statistical Area.md",
+    "notes/Grammar et al.md",
+    "notes/Fedora Linux.md",
+    "notes/Atomic Notes.md",
+    "lists/Bookmarklets.md",
+    "lists/Free Facts.md",
+    "lists/Inspiration.md",
+    "lists/Link Collection.md",
+    "lists/Music.md",
+    "lists/Newsletters Collection.md",
+    "lists/Podcast Colection.md",
+    "lists/Quotes Collection.md",
+    "lists/Snippets.md",
+    "lists/Tools Collection.md",
+    "lists/Wishlist.md",
+    "lists/Words Collection.md",
+    "learning/guitar/Chord.md",
+    "learning/guitar/Arpeggio.md",
+    "learning/Today I Learned.md",
+    "learning/Story Structure.md",
     "templates"
   ]
 }

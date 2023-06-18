@@ -9,6 +9,4 @@ menu:
   before:
 ---
 
-# Journals
-
 {{< section >}}
