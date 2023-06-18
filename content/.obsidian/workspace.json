@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "870af3d869e9a35e",
+        "id": "0f85ef19262682ca",
         "type": "tabs",
         "children": [
           {
-            "id": "11b25bcb68b6474e",
+            "id": "be5496b0d2ebd50f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Tasks.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Tasks.md"
+              }
             }
           }
         ]
@@ -130,14 +138,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "switcher:Open quick switcher": false,
+      "command-palette:Open command palette": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "templates:Insert template": false
     }
   },
-  "active": "11b25bcb68b6474e",
+  "active": "be5496b0d2ebd50f",
   "lastOpenFiles": [
+    "Projects.md",
+    "Cheatsheet.md",
+    "About.md",
+    "_index.md",
+    "Tasks.md",
     "learning/guitar/_index.md",
     "notes/Skullcandy Crusher ANC.md",
     "notes/Serif.md",
@@ -159,11 +173,6 @@
     "lists/Snippets.md",
     "lists/Tools Collection.md",
     "lists/Wishlist.md",
-    "lists/Words Collection.md",
-    "learning/guitar/Chord.md",
-    "learning/guitar/Arpeggio.md",
-    "learning/Today I Learned.md",
-    "learning/Story Structure.md",
     "templates"
   ]
 }

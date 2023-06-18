@@ -12,17 +12,12 @@ Amethyst was primarily created as a theme for my [course notes](https://notes.be
 
 ## Get Started
 
-> 📚 Step 1: [Setup your own Amethyst instance](setup/setup.md)
-
-> ✏️ Step 2: [Editing Notes in Amethyst](setup/editing.md)
-
-> 🔗 Step 3: [How to setup your Obsidian Vault to work with Amethyst](setup/obsidian.md)
-
-> 👀 Step 4: [Preview Changes](setup/preview%20changes.md)
-
-> 🌍 Step 5: [Hosting Amethyst online!](setup/hosting.md)
-
-> 🎨 Step 6: [Customizing Amethyst](setup/config.md)
+- 📚 Step 1: [Setup your own Amethyst instance](setup/setup.md)
+- ✏️ Step 2: [Editing Notes in Amethyst](setup/editing.md)
+- 🔗 Step 3: [How to setup your Obsidian Vault to work with Amethyst](setup/obsidian.md)
+- 👀 Step 4: [Preview Changes](setup/preview%20changes.md)
+- 🌍 Step 5: [Hosting Amethyst online!](setup/hosting.md)
+- 🎨 Step 6: [Customizing Amethyst](setup/config.md)
 
 Returning user? Here's how to [[setup/updating|update]] your existing Amethyst instance.
 
@@ -30,7 +25,7 @@ Here's a list of all [setup-related notes](/tags/setup), which are also accessib
 
 ## What is a Digital Garden?
 
-A digital garden is a combination of an **online notebook** and a **personal Wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [[notes/atomic-notes|atomic-notes]] [atomic notes](/docs/notes/atomic-notes/), and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
+A digital garden is a combination of an **online notebook** and a **personal Wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [[notes/Atomic Notes|atomic notes]] and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
 
 Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. Consistent work creating and maintaining a digital garden, eventually yields fruits. (pun intended)
 
