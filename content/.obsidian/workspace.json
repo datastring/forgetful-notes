@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tasks.md",
+                "file": "setup/_index.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tasks.md",
+                "file": "setup/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks.md",
+                "file": "setup/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tasks.md"
+                "file": "setup/_index.md"
               }
             }
           }
@@ -147,12 +147,22 @@
   },
   "active": "be5496b0d2ebd50f",
   "lastOpenFiles": [
+    "templates/_index.md",
+    "setup/_index.md",
+    "notes/_index.md",
+    "lists/_index.md",
+    "journals/_index.md",
+    "features/_index.md",
+    "learning/_index.md",
+    "learning/guitar/_index.md",
+    "_index.md",
+    "features/section/_index.md",
+    "features/section/second-page.md",
+    "features/section/first-page.md",
+    "Tasks.md",
     "Projects.md",
     "Cheatsheet.md",
     "About.md",
-    "_index.md",
-    "Tasks.md",
-    "learning/guitar/_index.md",
     "notes/Skullcandy Crusher ANC.md",
     "notes/Serif.md",
     "notes/Sans-serif.md",
@@ -163,16 +173,6 @@
     "notes/Fedora Linux.md",
     "notes/Atomic Notes.md",
     "lists/Bookmarklets.md",
-    "lists/Free Facts.md",
-    "lists/Inspiration.md",
-    "lists/Link Collection.md",
-    "lists/Music.md",
-    "lists/Newsletters Collection.md",
-    "lists/Podcast Colection.md",
-    "lists/Quotes Collection.md",
-    "lists/Snippets.md",
-    "lists/Tools Collection.md",
-    "lists/Wishlist.md",
     "templates"
   ]
 }
