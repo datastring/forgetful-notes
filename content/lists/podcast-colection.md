@@ -4,8 +4,6 @@ summary: "List of podcasts I follow."
 bookToc: false
 ---
 
-# Podcasts I Listen To
-
 ## Regular Shows
 *These are the shows I listen to on release.*
 

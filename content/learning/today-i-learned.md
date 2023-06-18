@@ -2,8 +2,6 @@
 title: Today I Learned
 ---
 
-# Today I Learned
-
 ### Dyslexia
 
 > This website will try to show you how people with Dyslexia struggle everyday. [Check it out](https://geon.github.io/programming/2016/03/03/dsxyliea).

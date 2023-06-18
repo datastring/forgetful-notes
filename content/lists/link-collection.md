@@ -2,8 +2,6 @@
 title: Links I Frequent
 ---
 
-# Links I Frequent
-
 - [Fastmail](https://app.fastmail.com/mail/)
 - [TickTick](https://ticktick.com/webapp)
 - [Raindrop](https://app.raindrop.io/)

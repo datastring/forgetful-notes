@@ -3,8 +3,6 @@ title: Python
 tags: python
 ---
 
-# Python
-
 ## Cheat Sheet
 
 - Python terminal: `python3` in cmd.

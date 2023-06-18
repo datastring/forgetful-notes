@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "42a9b47702ff8930",
+    "type": "split",
+    "children": [
+      {
+        "id": "93228e3d9c91c9fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6eeba556aa50f81a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eac73aaa6e1e64ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c55cf7b430869fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31d00d2b801ee55c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0841d5ef9e5b3f13",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "187a0161324aae8a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "21b8f29e4c21307c",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb6dce6e0f18f141",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9c7aa720b6cf5c8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5bad4c8eb3c6b3cb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3d1a3b2124850a8a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "457311edf8c309e5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "6eeba556aa50f81a",
+  "lastOpenFiles": [
+    "setup/custom domain.md",
+    "features/section/first-page.md",
+    "features/section/second-page.md",
+    "features/section/_index.md",
+    "learning/guitar/_index.md",
+    "features/_index.md",
+    "tasks.md",
+    "templates/_index.md",
+    "lists/_index.md",
+    "_index.md",
+    "learning/guitar/arpeggio.md",
+    "templates"
+  ]
+}

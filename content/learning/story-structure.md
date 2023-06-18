@@ -1,5 +1,5 @@
 ---
-title: Story Structure
+title: Learning Story Structure
 summary: "Dan Harmon walks us through Story Structure 101 thru 106."
 # bookFlatSection: true
 # bookCollapseSection: true
@@ -11,8 +11,6 @@ summary: "Dan Harmon walks us through Story Structure 101 thru 106."
 # weight: 1
 # bookHidden: true
 ---
-
-# Learning Story Structure
 
 **Source:**
 - https://channel101.fandom.com/wiki/Story_Structure_101:_Super_Basic_Shit

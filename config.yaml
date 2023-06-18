@@ -25,7 +25,7 @@ menu:
   #     weight: 10
   after:
     - name: "Github"
-      url: "https://github.com/64bitpandas/amethyst"
+      url: "https://github.com/datastring/amethyst"
       weight: 10
 
 params:
@@ -81,7 +81,6 @@ params:
   # Site description and title
   description:
     Notes, hosted by @datastring.
-
   
   # Footer links
   links:

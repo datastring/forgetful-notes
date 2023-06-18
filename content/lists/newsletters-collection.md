@@ -3,8 +3,6 @@ title: "Newsletters I Read"
 summary: "List of newsletters I subscribe to."
 ---
 
-# Newsletters I Read
-
 - [The Daily Dip](https://www.thedailydip.co/) – Daily News.
 - [8bit News](https://8bitnews.io/) – Collected, curated, 8bit news.
 - [The Orbital Index](https://orbitalindex.com/) – Space: weekly, technical, curated.

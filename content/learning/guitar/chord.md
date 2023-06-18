@@ -9,7 +9,6 @@ bookHidden: true
 # bookComments: false
 # bookSearchExclude: false
 ---
-# Chord (music)
 
 ## Definition
 

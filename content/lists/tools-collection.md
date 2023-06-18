@@ -3,8 +3,6 @@ title: Tools I Use
 summary: "Tools I use regularly."
 ---
 
-# Tools I Use
-
 ## Hardware
 - [Lenovo Thinkpad T480s](https://www.notebookcheck.net/Lenovo-ThinkPad-T480s-20L8S02D00.294734.0.html) – Laptop
 - [Logi M575](https://www.logitech.com/en-us/products/mice/m575-ergo-wireless-trackball) – Mouse

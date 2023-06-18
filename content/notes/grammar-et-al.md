@@ -1,9 +1,7 @@
 ---
-title: Grammar et al.
+title: Grammar et al
 summary: "."
 ---
-
-# Grammar et al.
 
 ## Using I.e. and E.g. Correctly
 

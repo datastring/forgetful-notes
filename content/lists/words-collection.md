@@ -3,8 +3,6 @@ title: Words I Like
 summary: "Compilation of words I like."
 ---
 
-# Words I Like
-
 ## Nouns
 
 ### Contrivance

@@ -5,8 +5,6 @@ bookToc: true
 draft: true
 ---
 
-# Bookmarklets
-
 ## Font Finder
 View Fonts used.
 

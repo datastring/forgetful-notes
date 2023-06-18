@@ -6,8 +6,6 @@ menu:
   after:
 ---
 
-# Cheat Sheet
-
 <div class="trigger"><a href="https://512kb.club"><img src="/svg/green-team.svg" alt="a proud member of the green team of 512KB club" /></a></div>
 <div class="hide">Proud member of the 512KB Club's Green Team.</div>
 

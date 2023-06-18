@@ -1,11 +1,10 @@
 ---
-title: "Customization"
+title: "Configuration"
 tags:
 - setup
 weight: 0
 ---
 
-# Configuration
 Amethyst is designed to be extremely configurable. You can find the bulk of the configuration scattered throughout the repository depending on how in-depth you'd like to get.
 
 The majority of configuration can be found under `config.yaml`. An example, with descriptions for each setting, can be found [here](https://github.com/64bitpandas/amethyst/blob/main/config.yaml).

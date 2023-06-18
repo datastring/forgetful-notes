@@ -9,8 +9,6 @@ menu:
   before:
 ---
 
-# Projects
-
 | Website | Description | Source Code |
 | :---: | :---: | :---: |
 | Blog + About | [miguelpimentel.do](https://miguelpimentel.do/blog/) | [Source](https://github.com/datastring/datastring.github.io) |

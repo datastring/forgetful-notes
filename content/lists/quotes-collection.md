@@ -3,8 +3,6 @@ title: Quotes I Like
 summary: "My Quotes Collection."
 ---
 
-# Quotes I Like
-
 ## Motivational Quotes
 
 > “Be regular and orderly in your life, so that you may be violent and zriginal in your work.”

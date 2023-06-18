@@ -4,7 +4,6 @@ tags: linux
 summary: "Linux distribution developed by the Fedora Project. Originally developed as a continuation of the Red Hat Linux project."
 bookHidden: true
 ---
-# Fedora Linux
 
 ## Lessons Learned
 - Fedora disables GPU acceleration by default. Reenable by following [this guide](https://ask.fedoraproject.org/t/proprietary-video-codecs-are-no-longer-hardware-accelerated-by-default-on-amd-gpus-on-fedora-37/28965#solution-4).

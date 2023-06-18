@@ -3,8 +3,6 @@ title: Music
 draft: true
 ---
 
-# Music
-
 ## Artists
 
 - K.Flay

@@ -1,5 +1,5 @@
 ---
-title: Playing Guitar
+title: Learning to Play the Guitar
 tags: guitar
 # weight: 1
 # bookFlatSection: false
@@ -11,8 +11,6 @@ tags: guitar
 summary: "Simply learning how to play the guitar."
 ---
 
-# Learning to Play the Guitar
-
 ![img](./cover-image.png)
 
 **Sources**
@@ -23,7 +21,7 @@ summary: "Simply learning how to play the guitar."
 
 ###  [Arpeggio](./arpeggio)
 
-```ASCII
+```markdown
 e|--------2-----------------|
 B|------3---3---------------|
 G|----2-------2-------------|
@@ -34,7 +32,7 @@ E|--------------------------|
 
 ### Metallica – Enter the Sandman (Intro)
 
-```ASCII
+```markdown
 e|---------------------|------------------|---------------|--------------------|
 B|---------------------|------------------|---------------|--------------------|
 G|---------------------|------------------|---------------|--------------------|

@@ -3,8 +3,6 @@ title: MPV Player
 # bookHidden: true
 ---
 
-# MPV Player
-
 ## mpv.conf
 ```toml
 volume=50

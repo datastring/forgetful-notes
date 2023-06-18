@@ -4,8 +4,6 @@ summary: "Source for my inspirations."
 bookToc: false
 ---
 
-# What Inspires Me
-
 ## Inspired by People
 - [Andy Bell](https://andy-bell.co.uk/)
 - [Derek Sivers](https://sive.rs/)

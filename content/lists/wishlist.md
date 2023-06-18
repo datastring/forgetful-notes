@@ -4,8 +4,6 @@ summary: "Items I want and plan on buying later."
 bookToc: false
 ---
 
-# Wishlist
-
 Items I want and plan on buying later.
 
 - **Valuable Humans in Transit and Other Stories** – [Book](https://qntm.org/vhitaos) – [Paperback](https://www.amazon.com/dp/B0BLGBZPJX)

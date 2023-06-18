@@ -4,8 +4,6 @@ summary: "Like Fun Facts, but Free and not always Fun."
 bookToc: false
 ---
 
-# Free Facts
-
 ## Minnesota
 
 ### State Capitol Dome

@@ -3,8 +3,6 @@ title: Snippets
 draft: true
 ---
 
-# Snippets
-
 ## Buttons
 
 <a class="link_button" href="#" target="_blank">No \<span></a>

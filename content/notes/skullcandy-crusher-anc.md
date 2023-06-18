@@ -3,7 +3,6 @@ title: Skullcandy Crusher ANC
 summary: "Controls, Personal Sound Profiles, Tile Tracker support."
 # bookHidden: true
 ---
-# Skullcandy Crusher ANC
 
 ## Support Website
 - [Link](https://info.skullcandy.com/Support?Dest=hc%2Fen-us%2Fsearch%2Fclick%3Fdata%3DBAh7DjoHaWRsKwjGBbvTUwA6D2FjY291bnRfaWRpA3CRBzoJdHlwZUkiDGFydGljbGUGOgZFVDoIdXJsSSJXaHR0cHM6Ly9zdXBwb3J0LnNrdWxsY2FuZHkuY29tL2hjL2VuLXVzL2FydGljbGVzLzM2MDAzNDUzNDg1NC1DcnVzaGVyLUFOQy1XaXJlbGVzcwY7CFQ6DnNlYXJjaF9pZEkiKTUzNTYyNmMzLWI0MTktNGY2Yy05ZmRkLTBiNGE2NzE0NDMyYwY7CEY6CXJhbmtpBzoLbG9jYWxlSSIKZW4tdXMGOwhUOgpxdWVyeUkiEGNydXNoZXIgYW5jBjsIVDoScmVzdWx0c19jb3VudGkY--c04f82bb11ed9893aaece616370bf9e0fd29f498)
