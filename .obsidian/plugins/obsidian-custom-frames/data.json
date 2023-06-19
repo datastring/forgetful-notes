@@ -1,0 +1,16 @@
+{
+  "frames": [
+    {
+      "url": "http://localhost:1313/",
+      "displayName": "Hugo Preview",
+      "icon": "cat",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": ""
+    }
+  ],
+  "padding": 5
+}

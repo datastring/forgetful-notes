@@ -1,9 +1,5 @@
 ---
 title: Features
-bookHidden: true
-weight: 40
-menu:
-  after:
 ---
 
 ## Buttons

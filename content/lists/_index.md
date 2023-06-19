@@ -7,7 +7,8 @@ bookCollapseSection: true
 weight: 90
 ---
 
-## MOC
+## List of Lists
+
 - [[Bookmarklets]]
 - [[Free Facts]]
 - [[Inspiration]]

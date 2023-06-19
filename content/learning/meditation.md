@@ -1,5 +1,5 @@
 ---
-title: Learning to Meditate
+title: Meditate
 summary: "In mindfulness meditation, we’re learning how to pay attention to the breath as it goes in and out, and notice when the mind wanders from this task. The idea behind mindfulness seems simple—the practice takes patience."
 ---
 

@@ -1,36 +1,17 @@
 ---
-title: Learning Story Structure
+title: Story Structure
 summary: "Dan Harmon walks us through Story Structure 101 thru 106."
 ---
-
-**Source:**
-- https://channel101.fandom.com/wiki/Story_Structure_101:_Super_Basic_Shit
-
-## Links
-
-HN post: [Ask HN: I'd like to learn how to tell stories better to friends](https://news.ycombinator.com/item?id=34562930)
-
-Story Structure by Dan Harmon
-- [Story Structure 101: Super Basic Shit | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_101:_Super_Basic_Shit)
-- [Story Structure 102: Pure, Boring Theory | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_102:_Pure,_Boring_Theory)
-- [Story Structure 103: Let's Simplify Before Moving On | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_103:_Let%27s_Simplify_Before_Moving_On)
-- [Story Structure 104: The Juicy Details | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_104:_The_Juicy_Details)
-- [Story Structure 105: How TV is Different | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_105:_How_TV_is_Different)
-- [Story Structure 106: Five Minute Pilots | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_106:_Five_Minute_Pilots)
-- [Video - Storyline, character building critique on different TV series](https://www.youtube.com/playlist?list=PLUYr55OIJOjDgVtAeD9VyM96BS1qTFKbH)
 
 ## Story Structure 101: Super Basic Shit
 *By Dan Harmon*
 
 Storytelling comes naturally to humans, but since we live in an unnatural world, we sometimes need a little help doing what we'd naturally do.
 
-Draw a circle and divide it in half vertically.
-
-Divide the circle again horizontally.
-
-Starting from the 12 o clock position and going clockwise, number the 4 points where the lines cross the circle: 1, 3, 5 and 7.
-
-Number the quarter-sections themselves 2, 4, 6 and 8.
+1. Draw a circle and divide it in half vertically.
+2. Divide the circle again horizontally.
+3. Starting from the 12 o clock position and going clockwise, number the 4 points where the lines cross the circle: 1, 3, 5 and 7.
+4. Number the quarter-sections themselves 2, 4, 6 and 8.
 
 Here we go, down and dirty:
 
@@ -450,3 +431,16 @@ Q: If you're so great, why haven't you written anything good? A: Isn't that alwa
 Q: I disagree with your model, I don't think all stories are required to do this or that. A: Prove me wrong. It'd be a great exercise. Don't have a protagonist. Or do have one, but don't give [it] a need. Or have a protagonist with a need whose circumstances never change. Or have a protagonist with a need enter a new set of circumstances, fail to adapt and never find what they needed. Or have them do everything but return. The first lesson you'll learn is that it's pretty hard to actively defy this story model. As soon as you get in the zone and you're writing something that's making you happy, you're going to realize with horror that you've accidentally nailed one of the story steps at exactly the right time.
 
 *End of Series*
+
+## Sources
+
+HN post: [Ask HN: I'd like to learn how to tell stories better to friends](https://news.ycombinator.com/item?id=34562930)
+
+Story Structure by Dan Harmon series:
+- [Story Structure 101: Super Basic Shit | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_101:_Super_Basic_Shit)
+- [Story Structure 102: Pure, Boring Theory | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_102:_Pure,_Boring_Theory)
+- [Story Structure 103: Let's Simplify Before Moving On | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_103:_Let%27s_Simplify_Before_Moving_On)
+- [Story Structure 104: The Juicy Details | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_104:_The_Juicy_Details)
+- [Story Structure 105: How TV is Different | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_105:_How_TV_is_Different)
+- [Story Structure 106: Five Minute Pilots | Channel 101 Wiki | Fandom](https://channel101.fandom.com/wiki/Story_Structure_106:_Five_Minute_Pilots)
+- [Video - Storyline, character building critique on different TV series](https://www.youtube.com/playlist?list=PLUYr55OIJOjDgVtAeD9VyM96BS1qTFKbH)

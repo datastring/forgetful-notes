@@ -1,11 +1,10 @@
 [
-  "homepage",
   "links",
-  "auto-template-trigger",
   "obsidian-editor-shortcuts",
   "OA-file-hider",
   "obsidian-doubleshift",
   "obsidian-minimal-settings",
   "obsidian-git",
-  "terminal"
+  "obsidian-custom-frames",
+  "hugo-preview-obsidian"
 ]

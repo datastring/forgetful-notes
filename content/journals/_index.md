@@ -1,10 +1,11 @@
 ---
 title: Journals
 bookToc: false
-bookHidden: true
-weight: 20
-menu:
-  before:
+# bookCollapseSection: true
+# bookHidden: true
+# weight: 20
+# menu:
+#  before:
 ---
 
 {{< section >}}
