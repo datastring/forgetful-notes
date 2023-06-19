@@ -2,6 +2,7 @@
 title: Tasks
 bookHidden: true
 weight: 40
+draft: true
 menu:
   before:
 ---

@@ -1,8 +1,8 @@
 ---
 title: Features
+bookHidden: true
 # bookFlatSection: true
 # bookToc: false
-# bookHidden: true
 # bookCollapseSection: true
 weight: 40
 menu:
@@ -44,11 +44,11 @@ Lorem markdownum insigne...
 {{</* /columns */>}}
 ```
 
-## Example
+### Example
 
 {{< columns >}}
 
-## Left Content
+### Left Content
 
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
@@ -57,14 +57,14 @@ Miseratus fonte Ditis conubia.
 
 <--->
 
-## Mid Content
+### Mid Content
 
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter!
 
 <--->
 
-## Right Content
+### Right Content
 
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
@@ -119,11 +119,6 @@ Lorem markdownum insigne...
 ## Callout Support
 
 Amethyst supports the same Admonition-callout syntax as Obsidian.
-
-This includes
-
-- 12 Distinct callout types (each with several aliases)
-- Collapsable callouts
 
 See [documentation on supported types and syntax here](https://help.obsidian.md/How+to/Use+callouts#Types).
 
@@ -217,7 +212,7 @@ To override the [initialization config](https://mermaid-js.github.io/mermaid/#/S
 create a `mermaid.json` file in your `assets` folder!
 {{< /hint >}}
 
-## Example
+### Example
 
 {{< columns >}}
 
@@ -261,12 +256,12 @@ Tabs let you organize content by context, for example installation instructions 
 {{</* /tabs */>}}
 ```
 
-## Example
+### Example
 
 {{< tabs "uniqueid" >}}
 {{< tab "MacOS" >}}
 
-# MacOS
+## MacOS
 
 This is tab **MacOS** content.
 
@@ -278,7 +273,7 @@ Miseratus fonte Ditis conubia.
 
 {{< tab "Linux" >}}
 
-# Linux
+## Linux
 
 This is tab **Linux** content.
 
@@ -290,7 +285,7 @@ Miseratus fonte Ditis conubia.
 
 {{< tab "Windows" >}}
 
-# Windows
+## Windows
 
 This is tab **Windows** content.
 

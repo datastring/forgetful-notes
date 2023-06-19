@@ -11,10 +11,8 @@ bookHidden: true
 
 ## Definition
 
-An arpeggio is **a type of [broken-chord](./chord) in which the notes that compose a chord are individually sounded in a progressive rising or descending order**. Arpeggios on keyboard instruments may be called rolled chords.
-
-[[chord|Chord]]
+An arpeggio is **a type of [broken-chord](content/notes/Chords.md) in which the notes that compose a chord are individually sounded in a progressive rising or descending order**. Arpeggios on keyboard instruments may be called rolled chords.
 
 Arpeggios indicate a chord in which the notes are sounded individually. The word "arpeggio" comes from the Italian word "arpeggiare," which means to play on a harp.
 
-<button class="bbutton" onclick="window.location.href=`/docs/learning/guitar`;"><span>Go back</span></button>
+{{< button relref="/learning/guitar" >}}Get Home{{< /button >}}

@@ -3,7 +3,7 @@ title: Learning to Meditate
 summary: "In mindfulness meditation, we’re learning how to pay attention to the breath as it goes in and out, and notice when the mind wanders from this task. The idea behind mindfulness seems simple—the practice takes patience."
 ---
 
-![Learn how to meditate|400](https://cdn.shortpixel.ai/spai/q_lossy+w_960+to_avif+ret_img/https://www.mindful.org/content/uploads/how-to-meditate.jpg)
+![Learn how to meditate](https://cdn.shortpixel.ai/spai/q_lossy+w_960+to_avif+ret_img/https://www.mindful.org/content/uploads/how-to-meditate.jpg)
 
 ## What is Meditation?
 

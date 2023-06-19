@@ -1,6 +1,6 @@
 {
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute",
+  "newLinkFormat": "relative",
   "foldIndent": false,
   "newFileLocation": "folder",
   "newFileFolderPath": "content/notes",
@@ -13,5 +13,7 @@
     "resources/",
     "public/",
     "layouts/"
-  ]
+  ],
+  "autoPairMarkdown": false,
+  "livePreview": true
 }

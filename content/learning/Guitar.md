@@ -1,17 +1,8 @@
 ---
 title: Learning to Play the Guitar
 tags: guitar
-# weight: 1
-# bookFlatSection: false
-# bookToc: true
-# bookHidden: false
-# bookCollapseSection: false
-# bookComments: false
-# bookSearchExclude: false
 summary: "Simply learning how to play the guitar."
 ---
-
-![img](./cover-image.png)
 
 **Sources**
 - https://tabs.ultimate-guitar.com/tab/metallica/enter-sandman-tabs-8595  
@@ -19,7 +10,7 @@ summary: "Simply learning how to play the guitar."
 
 ## Guitar Tabs
 
-###  [Arpeggio](./arpeggio)
+###  [[../notes/Arpeggio|Arpeggio]]
 
 ```markdown
 e|--------2-----------------|

@@ -1,15 +1,6 @@
 ---
 title: Learning Story Structure
 summary: "Dan Harmon walks us through Story Structure 101 thru 106."
-# bookFlatSection: true
-# bookCollapseSection: true
-# weight: 1
-# bookToc: false
-# bookHidden: false
-# bookComments: false
-# bookSearchExclude: false
-# weight: 1
-# bookHidden: true
 ---
 
 **Source:**
