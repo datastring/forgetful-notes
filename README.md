@@ -1,10 +1,11 @@
 # Amethyst – Stressed Silica
 
-Based on: [Hugo Amethyst](https://github.com/64bitpandas/amethyst).
+![last-commit](https://img.shields.io/github/last-commit/datastring/amethyst?style=for-the-badge)
+![deployment](https://img.shields.io/github/deployments/datastring/amethyst/github-pages?style=for-the-badge)
+![img](https://img.shields.io/github/repo-size/datastring/amethyst?style=for-the-badge)
+![img](https://img.shields.io/github/languages/code-size/datastring/amethyst?style=for-the-badge)
 
-![amethyst screenshot](https://github.com/64bitpandas/amethyst/blob/e8429e790e25dc6f3318826905f4e4a031d04363/images/screenshot.png)
-
-Amethyst is an attempt to deliver this by combining the navigational features of [hugo-book](https://github.com/alex-shpak/hugo-book) with the Obsidian integrations of [quartz](https://github.com/jackyzha0/quartz) to provide a hassle-free place to store and host personal notes or documentation.
+Based on [Amethyst](https://github.com/64bitpandas/amethyst), which itself is largely based on [Hugo Book](https://github.com/alex-shpak/hugo-book), and [Quartz](https://github.com/jackyzha0/quartz).
 
 ## Features
 
@@ -19,12 +20,8 @@ Amethyst preserves most of the features of quartz and hugo-book, including:
  - Mobile support
  - Obsidian-style back/forward links and page previews
 
-Some new features that were added on top:
+Added functionality on top:
  - Custom formatting of tabs, sections, and expands specifically for Q&A-style interaction
  - Easy customization of theme colors and fonts
  - LaTeX enabled out of the box with no additional config
  - Support for both absolute and relative links, Obsidian-style
-
-## Credits
-
-Amethyst is largely based on [Hugo Book](https://github.com/alex-shpak/hugo-book), and [Quartz](https://github.com/jackyzha0/quartz).
