@@ -12,14 +12,14 @@ Amethyst was primarily created as a theme for my [course notes](https://notes.be
 
 ## Get Started
 
-- 📚 Step 1: [Setup your own Amethyst instance](setup/setup.md)
-- ✏️ Step 2: [Editing Notes in Amethyst](setup/editing.md)
-- 🔗 Step 3: [How to setup your Obsidian Vault to work with Amethyst](setup/obsidian.md)
-- 👀 Step 4: [Preview Changes](setup/preview%20changes.md)
-- 🌍 Step 5: [Hosting Amethyst online!](setup/hosting.md)
-- 🎨 Step 6: [Customizing Amethyst](setup/config.md)
+- 📚 Step 1: [[amethyst/setup.md|Setup your own Amethyst instance]]
+- ✏️ Step 2: [Editing Notes in Amethyst](amethyst/setup/editing.md)
+- 🔗 Step 3: [How to setup your Obsidian Vault to work with Amethyst](amethyst/obsidian.md)
+- 👀 Step 4: [Preview Changes](amethyst/setup/preview%20changes.md)
+- 🌍 Step 5: [Hosting Amethyst online!](amethyst/setup/hosting.md)
+- 🎨 Step 6: [Customizing Amethyst](amethyst/setup/config.md)
 
-Returning user? Here's how to [[setup/updating|update]] your existing Amethyst instance.
+Returning user? Here's how to [[amethyst/setup/updating|update]] your existing Amethyst instance.
 
 Here's a list of all [setup-related notes](/tags/setup), which are also accessible via the sidebar menu under the "Getting Started" section.
 
@@ -54,3 +54,12 @@ The phrase "Digital Garden" comes up _often_ when I browse these notes. Surely I
 > This site is a _living_ document. Expect changes at _all_ content levels.
 > This site is first and foremost designed for an audience size of _one_.
 > Please keep that in mind as you navigate around.
+
+[Source Code](https://github.com/datastring/forgetful-notes)
+
+## Badges
+
+<img src="https://img.shields.io/github/last-commit/datastring/forgetful-notes?style=for-the-badge" />
+<img src="https://img.shields.io/github/deployments/datastring/forgetful-notes/github-pages?style=for-the-badge" />
+<img src="https://img.shields.io/github/repo-size/datastring/forgetful-notes?style=for-the-badge" />
+<img src="https://img.shields.io/github/languages/code-size/datastring/forgetful-notes?style=for-the-badge" />

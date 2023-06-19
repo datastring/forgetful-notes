@@ -1,9 +1,9 @@
 ---
-title: About Amethyst
-bookCollapseSection: true
+title: {{ title }}
 # bookFlatSection: false
-# bookToc: true
+# bookToc: false
 # bookHidden: false
+# bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
 ---

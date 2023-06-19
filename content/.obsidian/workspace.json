@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e17e9a4af0b30870",
+        "id": "d0152ccf446cbc4f",
         "type": "tabs",
         "children": [
           {
-            "id": "5d2e8fea9039e86c",
+            "id": "a3f71826729501c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "_index.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -145,8 +145,27 @@
       "templates:Insert template": false
     }
   },
-  "active": "5d2e8fea9039e86c",
+  "active": "a3f71826729501c6",
   "lastOpenFiles": [
+    "Features.md",
+    "Features",
+    "notes/config.md",
+    "About.md",
+    "_index.md",
+    "Cheatsheet.md",
+    "templates/Learning.md",
+    "templates/Journal.md",
+    "templates/_index.md",
+    "notes/Sans-serif.md",
+    "notes/Skullcandy Crusher ANC.md",
+    "notes/Grammar et al.md",
+    "notes/Micropolitan Statistical Area.md",
+    "lists/Free Facts.md",
+    "learning/guitar/_index.md",
+    "learning/_index.md",
+    "journals/2023-06-13.md",
+    "Projects.md",
+    "Tasks.md",
     "features/_index.md",
     "amethyst/features/tabs.md",
     "amethyst/features/_index.md",
@@ -155,26 +174,8 @@
     "amethyst/features/details.md",
     "amethyst/features/columns.md",
     "amethyst/features/buttons.md",
-    "amethyst/features/callouts.md",
     "amethyst/features",
     "amethyst",
-    "features/buttons.md",
-    "setup/_index.md",
-    "templates/_index.md",
-    "notes/_index.md",
-    "lists/_index.md",
-    "journals/_index.md",
-    "learning/_index.md",
-    "learning/guitar/_index.md",
-    "_index.md",
-    "features/section/_index.md",
-    "features/section/second-page.md",
-    "features/section/first-page.md",
-    "Tasks.md",
-    "Projects.md",
-    "Cheatsheet.md",
-    "About.md",
-    "notes/Skullcandy Crusher ANC.md",
     "templates"
   ]
 }

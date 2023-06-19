@@ -3,10 +3,6 @@ title: "Configuration"
 bookHidden: true
 ---
 
-Amethyst is designed to be extremely configurable. You can find the bulk of the configuration scattered throughout the repository depending on how in-depth you'd like to get.
-
-The majority of configuration can be found under `config.yaml`. An example, with descriptions for each setting, can be found [here](https://github.com/64bitpandas/amethyst/blob/main/config.yaml).
-
 ### Code Block Titles
 To add code block titles with Amethyst:
 
@@ -24,9 +20,6 @@ To add code block titles with Amethyst:
        enableCodeBlockTitle: true  # example from step 1
        ```
       ```
-
-**Note** that if `{title=<my-title>}` is included, and code block titles are not
-enabled, no errors will occur, and the title attribute will be ignored.
 
 ### HTML Favicons
 If you would like to customize the favicons, you 
@@ -67,27 +60,6 @@ information about the current and past standards of favicons, you can read
 **Note** that all generated favicon paths, defined by the `href` 
 attribute, are relative to the `static/` directory.
 
-### Graph View
-To customize the Interactive Graph view, you can poke around `data/graphConfig.yaml`. The default configuration, with descriptions, can be found [here](https://github.com/64bitpandas/amethyst/blob/main/data/graphConfig.yaml).
-
-### Language Support
-[Chinese, Japanese, and Korean support](features/language.md) comes out of the box with Amethyst.
-
-Want to support languages that read from right-to-left (like Arabic)? Hugo (and by proxy, Amethyst) supports this natively.
-
-Follow the steps [Hugo provides here](https://gohugo.io/content-management/multilingual/#configure-languages) and modify your `config.yaml`
-
-For example:
-
-```yaml
-defaultContentLanguage: ar
-languages:
-  ar:
-    languagedirection: rtl
-    title: مدونتي
-    weight: 2
-```
-
 # Custom Styles
 Want to go even more in-depth? You can add custom CSS styling in `assets/_custom.scss`. If you'd like to target specific parts of the site, you can add ids and classes to the HTML partials in `/layouts/partials`. 
 
@@ -103,9 +75,5 @@ You can place all local fonts in the `static/fonts` folder.
 Partials are what dictate what gets rendered to the page. Want to change how pages are styled and structured? You can edit the appropriate layout in `/layouts`.
 
 For example, the structure of the home page can be edited through `/layouts/index.html`. To customize the footer, you can edit `/layouts/partials/footer.html`
-
-More info about partials on [Hugo's website.](https://gohugo.io/templates/partials/)
-
-Still having problems? Checkout our [FAQ and Troubleshooting guide](setup/troubleshooting.md).
 
 

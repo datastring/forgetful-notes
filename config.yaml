@@ -2,7 +2,7 @@ baseURL: https://stressed.dev/
 
 # Book configuration
 disablePathToLower: true
-enableGitInfo: true
+enableGitInfo: false
 
 # # Needed for mermaid/katex shortcodes
 markup:
@@ -18,15 +18,15 @@ markup:
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 
 # Sidebar menu additional links
-menu:
+# menu:
   # before:
   #   - name: "Sample"
   #     url: "https://google.com"
   #     weight: 10
-  after:
-    - name: "Github"
-      url: "https://github.com/datastring/amethyst"
-      weight: 10
+  # after:
+    # - name: "Github"
+    #   url: "https://github.com/datastring/amethyst"
+    #   weight: 10
 
 params:
 
@@ -80,14 +80,12 @@ params:
 
   # Site description and title
   description:
-    Notes, hosted by @datastring.
+    Notes, Journals, and personal Wiki hosted by @datastring.
   
   # Footer links
   links:
-    - link_name: Website
-      link: https://miguelpimentel.do/
     - link_name: Blog
-      link: https://miguelpimentel.do/
+      link: https://miguelpimentel.do/blog/
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
