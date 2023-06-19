@@ -1,5 +1,6 @@
 {
   "accentColor": "#aa6f1d",
   "cssTheme": "Minimal",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "baseFontSize": 16
 }

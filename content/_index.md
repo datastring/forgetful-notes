@@ -4,7 +4,7 @@ title: Welcome to my Digital Garden
 
 ## What is a Digital Garden?
 
-A digital garden is a combination of an **online notebook** and a **personal Wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [[notes/Atomic Notes|atomic notes]], and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
+A digital garden is a combination of an **online notebook** and a **personal Wiki**, where digital gardeners write in small, unfinished pieces, also known as [[notes/Atomic Notes|atomic notes]], and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
 
 The phrase "digital garden" comes up _often_ while browsing these notes. Surely I overuse it. That said, I still like it. It more closely describes what I envision this website to be: a carefully curated garden of digital notes. Having a reliable system on which to dump raw information is extremely useful. The idea of [[content/notes/Sweep Your Mind|sweeping]] one's mind is helpful to rid yourself of distractions from incorrectly prioritized tasks.
 
