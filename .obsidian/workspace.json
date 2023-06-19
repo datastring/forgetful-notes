@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_index.md",
+                "file": "content/_index.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_index.md",
+                "file": "content/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_index.md",
+                "file": "content/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_index.md"
+                "file": "content/_index.md"
               }
             }
           }
@@ -147,11 +147,11 @@
   },
   "active": "a3f71826729501c6",
   "lastOpenFiles": [
+    "About.md",
+    "_index.md",
     "Features.md",
     "Features",
     "notes/config.md",
-    "About.md",
-    "_index.md",
     "Cheatsheet.md",
     "templates/Learning.md",
     "templates/Journal.md",
