@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "00eb108ed4793fe2",
+        "id": "322910f5a4ed0dce",
         "type": "tabs",
         "children": [
           {
-            "id": "b0990e38ca46d0f9",
+            "id": "1b1061ed10f964b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -86,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 216.5
   },
   "right": {
     "id": "21b8f29e4c21307c",
@@ -142,13 +142,18 @@
       "switcher:Open quick switcher": false,
       "command-palette:Open command palette": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false
+      "templates:Insert template": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "b0990e38ca46d0f9",
+  "active": "1b1061ed10f964b0",
   "lastOpenFiles": [
-    "README.md",
     "content/_index.md",
+    "content/Features.md",
+    "content/Today I Learned.md",
+    "content/lists/_index.md",
+    "content/learning/_index.md",
+    "README.md",
     "public/lists/Snippets/index.html",
     "public/lists/Snippets",
     "content/lists/Free Facts.md",
@@ -157,24 +162,20 @@
     "docs/notes",
     "docs",
     "content/lists/Bookmarklets.md",
-    "content/lists/_index.md",
     "content/journals/2023-06-05.md",
     "content/notes/_index.md",
     "content/templates/Frontmatter.md",
     "content/learning/Guitar.md",
     "content/learning/Meditation.md",
     "content/learning/Story Structure.md",
-    "content/learning/Today I Learned.md",
     "content/notes/Arpeggio.md",
     "content/notes/Atomic Notes.md",
     "content/notes/Fedora Linux.md",
     "content/journals/_index.md",
-    "content/learning/_index.md",
     "content/learning/guitar/cover-image-guitar.png",
     "content/notes/Chords.md",
     "content/notes/config.md",
     "content/templates/_index.md",
-    "content/Features.md",
     "content/Tasks.md",
     "content/Projects.md",
     "content/notes/Continuous Care.md",

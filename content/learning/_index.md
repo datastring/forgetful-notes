@@ -1,6 +1,6 @@
 ---
 title: Learning
 bookToc: false
-bookFlatSection: true
+bookFlatSection: false
 weight: 80
 ---

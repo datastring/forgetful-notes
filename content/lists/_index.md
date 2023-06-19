@@ -1,8 +1,8 @@
 ---
 title: Lists
 bookToc: false
-bookFlatSection: true
-# bookCollapseSection: true
+bookCollapseSection: true
+# bookFlatSection: true
 # bookHidden: false
 weight: 90
 ---

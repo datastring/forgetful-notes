@@ -1,9 +1,6 @@
 ---
 title: Features
 bookHidden: true
-# bookFlatSection: true
-# bookToc: false
-# bookCollapseSection: true
 weight: 40
 menu:
   after:
