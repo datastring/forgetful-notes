@@ -2,7 +2,7 @@
   "version": 3,
   "homepages": {
     "Main Homepage": {
-      "value": "_index",
+      "value": "content/_index",
       "kind": "File",
       "openOnStartup": true,
       "hasRibbonIcon": true,
@@ -12,7 +12,7 @@
       "revertView": true,
       "openWhenEmpty": true,
       "refreshDataview": false,
-      "autoCreate": true,
+      "autoCreate": false,
       "autoScroll": false,
       "pin": false,
       "commands": [],

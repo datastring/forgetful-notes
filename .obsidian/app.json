@@ -1,4 +1,17 @@
 {
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute"
+  "newLinkFormat": "absolute",
+  "foldIndent": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content/notes",
+  "userIgnoreFilters": [
+    "archetypes/",
+    "assets/",
+    "data/",
+    "i18n/",
+    "static/",
+    "resources/",
+    "public/",
+    "layouts/"
+  ]
 }

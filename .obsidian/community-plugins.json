@@ -1,5 +1,10 @@
 [
   "homepage",
+  "links",
+  "auto-template-trigger",
+  "obsidian-editor-shortcuts",
+  "OA-file-hider",
+  "obsidian-doubleshift",
   "obsidian-minimal-settings",
-  "links"
+  "obsidian-git"
 ]

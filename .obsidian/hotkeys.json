@@ -94,5 +94,17 @@
   "workspace:goto-tab-5": [],
   "workspace:goto-tab-3": [],
   "workspace:goto-tab-2": [],
-  "workspace:goto-tab-1": []
+  "workspace:goto-tab-1": [],
+  "editor:delete-paragraph": [],
+  "editor:open-link-in-new-leaf": [],
+  "editor:toggle-checklist-status": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:new-tab": [],
+  "editor:open-link-in-new-window": []
 }

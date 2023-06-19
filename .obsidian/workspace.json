@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d0152ccf446cbc4f",
+        "id": "92bd8809453650ae",
         "type": "tabs",
         "children": [
           {
-            "id": "a3f71826729501c6",
+            "id": "dfd81c4e56950d22",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,14 +55,6 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "76fc9dbad95de869",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
             }
           }
         ]
@@ -145,8 +137,11 @@
       "templates:Insert template": false
     }
   },
-  "active": "a3f71826729501c6",
+  "active": "dfd81c4e56950d22",
   "lastOpenFiles": [
+    "content/_index.md",
+    "content/notes/Sweep Your Mind.md",
+    "README.md",
     "About.md",
     "_index.md",
     "Features.md",
@@ -171,9 +166,6 @@
     "amethyst/features/_index.md",
     "amethyst/features/mermaid.md",
     "amethyst/features/latex.md",
-    "amethyst/features/details.md",
-    "amethyst/features/columns.md",
-    "amethyst/features/buttons.md",
     "amethyst/features",
     "amethyst",
     "templates"

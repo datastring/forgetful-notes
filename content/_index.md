@@ -6,19 +6,11 @@ title: Welcome to my Digital Garden
 
 A digital garden is a combination of an **online notebook** and a **personal Wikipedia**, where digital gardeners write in small, unfinished pieces, also known as [[notes/Atomic Notes|atomic notes]] and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
 
-The phrase "Digital Garden" comes up _often_ while browsing these notes. Surely I overuse it. That said, I still like it. It more closely describes what I envision this website to be; a carefully curated garden of digital notes.
+The phrase "Digital Garden" comes up _often_ while browsing these notes. Surely I overuse it. That said, I still like it. It more closely describes what I envision this website to be; a carefully curated garden of digital notes. Having a reliable system on which to dump raw information is extremely useful. The idea of [[content/notes/Sweep Your Mind|sweeping]] one's mind, or brain dumping is helpful to rid yourself of distractions from incorrectly prioritized tasks.
 
 Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. Consistent work creating and maintaining a digital garden, eventually yields fruits. (pun intended)
 
-Taking raw notes is _useless_. Seed your garden with quality content and cultivate your curiosity. Plant seeds in your mind garden by taking smart personal notes. These don't need to be written in a publishable form.
-
 Gardens are _explorable_, rather than structured as a strictly linear stream, of posts. They grow _slowly_ over time, rather than creating "_finished_" work that you never touch again. You revise, update, and change your ideas as they develop, and ideally find a way to indicate the "done-ness" state of your reader.
-
-## Sweep Your Mind
-
-These notes make it possible to offload a massive amount of information while demonstrating "perfect recall" when needed. The goal of a mind sweep is to identify everything that requires your attention or has the possibility of seeping into and affecting other parts of your life. These include things that are stealing your focus, not letting you get your work done properly, etc.
-
-When you identify these things, you will realize that there are things in your head that you haven’t been doing anything about. More often than not, this is related to some level of incompletion or procrastination. As long as things keep accumulating, there’s no way they will get done. You can start to progress through these actions with a mind sweep.
 
 ## Continuous Care
 
@@ -28,7 +20,7 @@ Be the watchful caretaker of your ever growing plants and flowers. Grow your kno
 - Thread our thoughts.
 - Keep notes atomic.
 
-
+Taking raw notes is _useless_. Seed your garden with quality content and cultivate your curiosity. Plant seeds in your mind garden by taking smart personal notes. These don't need to be written in a publishable form.
 
 > [!info] Heads-up!
 >
