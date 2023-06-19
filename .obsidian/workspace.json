@@ -4,32 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "72df9f7dd63ebf7f",
+        "id": "d84b6d8073213504",
         "type": "tabs",
         "children": [
           {
-            "id": "000a94948d53a065",
+            "id": "1c2ae017d9d0f834",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/notes/Continuous Care.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "45e8a733a497a7fc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a6c28f9a6cfdeaa6",
-            "type": "leaf",
-            "state": {
-              "type": "hugo-preview-view",
+              "type": "empty",
               "state": {}
             }
           }
@@ -45,7 +27,7 @@
       {
         "id": "1c55cf7b430869fa",
         "type": "tabs",
-        "dimension": 77.11538461538461,
+        "dimension": 59.03846153846154,
         "children": [
           {
             "id": "31d00d2b801ee55c",
@@ -63,7 +45,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "setup/hosting",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,12 +54,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "d07ab736e135b499",
         "type": "tabs",
-        "dimension": 22.88461538461538,
+        "dimension": 40.96153846153846,
         "children": [
           {
             "id": "c9c7aa720b6cf5c8",
@@ -85,7 +68,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/notes/Continuous Care.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/notes/Continuous Care.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "content/notes/Continuous Care.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -161,8 +140,9 @@
       "graph:Open graph view": false
     }
   },
-  "active": "000a94948d53a065",
+  "active": "0841d5ef9e5b3f13",
   "lastOpenFiles": [
+    "content/notes/Continuous Care.md",
     "content/notes/Chords.md",
     "content/notes/Atomic Notes.md",
     "content/notes/Arpeggio.md",
@@ -181,7 +161,6 @@
     "content/journals/2023-06-05.md",
     "content/learning/_index.md",
     "content/journals/_index.md",
-    "content/notes/Continuous Care.md",
     "content/templates/Journal.md",
     "content/templates/Learning.md",
     "content/templates/Frontmatter.md",
