@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "0f85ef19262682ca",
+        "id": "8887b21a527a2f4f",
         "type": "tabs",
         "children": [
           {
-            "id": "be5496b0d2ebd50f",
+            "id": "a3e8d4522f3936a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "setup/_index.md",
+                "file": "_index.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "setup/_index.md",
+                "file": "_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "setup/_index.md",
+                "file": "_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "setup/_index.md"
+                "file": "_index.md"
               }
             }
           }
@@ -145,14 +145,25 @@
       "templates:Insert template": false
     }
   },
-  "active": "be5496b0d2ebd50f",
+  "active": "a3e8d4522f3936a5",
   "lastOpenFiles": [
-    "templates/_index.md",
+    "features/_index.md",
+    "amethyst/features/tabs.md",
+    "amethyst/features/_index.md",
+    "amethyst/features/mermaid.md",
+    "amethyst/features/latex.md",
+    "amethyst/features/details.md",
+    "amethyst/features/columns.md",
+    "amethyst/features/buttons.md",
+    "amethyst/features/callouts.md",
+    "amethyst/features",
+    "amethyst",
+    "features/buttons.md",
     "setup/_index.md",
+    "templates/_index.md",
     "notes/_index.md",
     "lists/_index.md",
     "journals/_index.md",
-    "features/_index.md",
     "learning/_index.md",
     "learning/guitar/_index.md",
     "_index.md",
@@ -164,15 +175,6 @@
     "Cheatsheet.md",
     "About.md",
     "notes/Skullcandy Crusher ANC.md",
-    "notes/Serif.md",
-    "notes/Sans-serif.md",
-    "notes/Python.md",
-    "notes/MPV.md",
-    "notes/Micropolitan Statistical Area.md",
-    "notes/Grammar et al.md",
-    "notes/Fedora Linux.md",
-    "notes/Atomic Notes.md",
-    "lists/Bookmarklets.md",
     "templates"
   ]
 }

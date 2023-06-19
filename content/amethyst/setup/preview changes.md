@@ -1,8 +1,5 @@
 ---
 title: "Preview Changes"
-tags:
-- setup
-weight: -2
 ---
 
 If you'd like to preview what your site looks like before deploying it to the internet, the following

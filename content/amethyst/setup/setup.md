@@ -1,8 +1,5 @@
 ---
 title: "Setup"
-tags:
-- setup
-weight: -5
 ---
 
 ## Getting Started

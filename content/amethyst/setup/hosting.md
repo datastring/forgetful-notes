@@ -1,9 +1,5 @@
 ---
 title: "Deploying Amethyst to the Web"
-tags:
-- setup
-aliases:
-- hosting
 ---
 
 ## Hosting on GitHub Pages
