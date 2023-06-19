@@ -1,5 +1,6 @@
 ---
 title: "Setup"
+bookHidden: true
 ---
 
 ## Getting Started

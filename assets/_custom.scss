@@ -15,3 +15,284 @@
 //   line-height: 0.5;
 //   margin: 15px 15px 10px 0;
 // }
+
+// @import "plugins/numbered";
+// @import "plugins/scrollbars";
+
+// Dracula Theme Palette Colors
+:root {
+  --dracula-bg: #282a36;
+  --dracula-cl: #44475a;
+  --dracula-fg: #f8f8f2;
+  --dracula-comment: #6272a4;
+  --dracula-cyan: #8be9fd;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-purple: #bd93f9;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
+}
+
+// Selection color and bg
+::selection {
+  color: #fff;
+  background-color: purple;
+}
+
+// table-of-contents on right sidebar
+// .book-toc-content a {
+//   font-size: 13px; // up from 12px
+// }
+
+// Headings
+
+// Color changes as h2 number increases
+.markdown h2:nth-of-type(6n + 1) {
+  color: var(--dracula-red);
+}
+.markdown h2:nth-of-type(6n + 2) {
+  color: var(--dracula-orange);
+}
+.markdown h2:nth-of-type(6n + 3) {
+  color: var(--dracula-yellow);
+}
+.markdown h2:nth-of-type(6n + 4) {
+  color: var(--dracula-green);
+}
+.markdown h2:nth-of-type(6n + 5) {
+  color: var(--dracula-cyan);
+}
+.markdown h2:nth-of-type(6n + 6) {
+  color: var(--dracula-purple);
+}
+.markdown h2:nth-of-type(6n + 7) {
+  color: var(--dracula-pink);
+}
+
+// h1 color - top of the page
+h1 {
+//   color: darkorange;
+}
+
+// Website Title Top Left h2 (Forgetful Notes)
+.book-brand {
+//   color: var(--dracula-green);
+}
+
+// h3 color - not formatted with h2(s)
+h3 {
+//   color: var(--dracula-pink);
+}
+
+// h4 color - not formatted with h2(s)
+h4 {
+//   color: var(--dracula-green);
+}
+
+//   Buttons
+// Button Styles
+// .link_button_og {
+//   border-radius: 4px;
+//   border: $padding-1 solid #4479BA;
+//   background: #20538D;
+//   color: #fff !important;
+//   padding: 8px 12px;
+//   text-decoration: none;
+// }
+
+.link_button {
+  // color: var(--color-link);
+  color: #fff !important;
+  display: inline-block;
+  cursor: pointer;
+  font-size: $font-size-14;
+  line-height: $padding-16 * 2;
+  padding: 0 $padding-16;
+  border-radius: $border-radius;
+  border: $padding-1 solid #4479ba;
+  background: #20538d;
+  // opacity: 0.85;
+
+  &:hover {
+    text-decoration: none !important;
+    transition: all 0.6s;
+    padding: 0 24px 0 24px;
+  }
+}
+
+// Link Button Forward
+.link_button_forward {
+  border-radius: 4px;
+  border: $padding-1 solid #4479ba;
+  background: #20538d;
+  color: #fff !important;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: $font-size-14;
+  line-height: $padding-16 * 2;
+}
+
+.link_button_forward span {
+  display: inline-block;
+  position: relative;
+  transition: 0.6s;
+}
+
+.link_button_forward:hover span {
+  padding-right: 24px;
+}
+
+.link_button_forward:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.link_button_forward span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+// Link Button Back
+.link_button_back {
+  border-radius: 4px;
+  border: $padding-1 solid #4479ba;
+  background: #20538d;
+  color: #fff !important;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: $font-size-14;
+  line-height: $padding-16 * 2;
+}
+
+.link_button_back span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.link_button_back:hover span {
+  padding-left: 24px;
+}
+
+.link_button_back:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+.link_button_back span:before {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -15px;
+  transition: 0.5s;
+}
+
+// Playing around with fire
+
+// Link Button
+.link_buttons {
+  border-radius: 4px;
+  border: $padding-1 solid #4479ba;
+  background: #20538d;
+  color: #fff !important;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: $font-size-14;
+  line-height: $padding-16 * 2;
+}
+
+.link_buttons span {
+  display: inline-block;
+  position: relative;
+  transition: 0.6s;
+}
+
+.link_buttons:hover span {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.link_buttons span:before {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -15px;
+  transition: 0.5s;
+}
+
+.link_buttons:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+.link_buttons span:after {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.link_buttons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+//   Sidebar
+// Colored File explorer bold section names
+.book-section-flat > a,
+.book-section-flat > span,
+.book-section-flat > label {
+//   color: #ffb86c;
+  font-size: 15px;
+//   text-decoration: underline;
+}
+
+// Margin left sidebar list items
+.book-section-flat {
+  margin-bottom: 16px; // down from 32px
+  margin-top: 16px; // down from 32px
+}
+
+// Color for page links. Blog, Projects, Public Journal Source
+a[href$="https://miguelpimentel.do/blog/"]
+{
+  color: var(--dracula-cyan);
+}
+a[href$="/Journals/"] {
+  color: var(--dracula-yellow);
+}
+a[href$="/Projects/"] {
+  color: var(--dracula-purple);
+}
+a[href$="/Tasks/"] {
+  color: var(--dracula-green);
+}
+
+a[href$="https://miguelpimentel.do/blog/"],
+a[href$="/Journals/"],
+a[href$="/Projects/"],
+a[href$="/Tasks/"] {
+  font-size: 15px;
+  font-weight: bold;
+  // text-decoration: underline;
+}
+
+// Left sidebar UL padding / indent size
+.book-section-flat > ul {
+  // color: cyan;
+//   padding-left: 8px;
+}
+
+.book-section-flat > ul > li {
+  // color: red;
+//   background-color: aqua;
+}

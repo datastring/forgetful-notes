@@ -1,9 +1,11 @@
 ---
 title: Features
+# bookCollapseSection: true
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
-bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
 ---
+
+{{<section>}}

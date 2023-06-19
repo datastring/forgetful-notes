@@ -1,5 +1,6 @@
 ---
 title: Columns
+bookHidden: true
 ---
 
 Columns help organize shorter pieces of content horizontally for readability.

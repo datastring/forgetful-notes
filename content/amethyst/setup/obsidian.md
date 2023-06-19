@@ -1,5 +1,6 @@
 ---
 title: "Obsidian Vault Integration"
+bookHidden: true
 ---
 
 ## Setup

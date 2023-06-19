@@ -1,5 +1,6 @@
 ---
 title: "Custom Domain"
+bookHidden: true
 ---
 
 ### Registrar

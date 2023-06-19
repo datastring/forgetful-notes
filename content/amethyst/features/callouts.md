@@ -1,5 +1,6 @@
 ---
 title: "Callouts"
+bookHidden: true
 ---
 
 ## Callout Support

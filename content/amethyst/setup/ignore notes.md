@@ -1,5 +1,6 @@
 ---
 title: "Ignoring Notes"
+bookHidden: true
 ---
 
 Edit `ignoreFiles` in `config.yaml` to include paths you'd like to exclude from being rendered.

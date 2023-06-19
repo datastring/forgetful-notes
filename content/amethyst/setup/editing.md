@@ -1,5 +1,6 @@
 ---
 title: "Editing Content"
+bookHidden: true
 ---
 
 Amethyst runs on top of [Hugo](https://gohugo.io/) so all notes are written in [Markdown](https://www.markdownguide.org/getting-started/).

@@ -1,5 +1,6 @@
 ---
 title: "LaTeX"
+bookHidden: true
 ---
 
 Block math works with two dollar signs `$$...$$`

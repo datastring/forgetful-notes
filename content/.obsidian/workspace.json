@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8887b21a527a2f4f",
+        "id": "e17e9a4af0b30870",
         "type": "tabs",
         "children": [
           {
-            "id": "a3e8d4522f3936a5",
+            "id": "5d2e8fea9039e86c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -145,7 +145,7 @@
       "templates:Insert template": false
     }
   },
-  "active": "a3e8d4522f3936a5",
+  "active": "5d2e8fea9039e86c",
   "lastOpenFiles": [
     "features/_index.md",
     "amethyst/features/tabs.md",

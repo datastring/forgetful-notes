@@ -1,5 +1,6 @@
 ---
 title: "Search"
+bookHidden: true
 ---
 
 Amethyst supports two modes of searching through content.

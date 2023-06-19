@@ -1,5 +1,6 @@
 ---
 title: "Preview Changes"
+bookHidden: true
 ---
 
 If you'd like to preview what your site looks like before deploying it to the internet, the following

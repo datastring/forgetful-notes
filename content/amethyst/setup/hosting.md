@@ -1,5 +1,6 @@
 ---
 title: "Deploying Amethyst to the Web"
+bookHidden: true
 ---
 
 ## Hosting on GitHub Pages
