@@ -23,29 +23,22 @@ Here's a few links to help you navigate the garden.
 - [[Today I Learned]]
 
 ## Loose Notes
-- [[notes/Arpeggio|Arpeggio]]
-- [[notes/Atomic Notes|Atomic Notes]]
-- [[notes/Chords|Chords]]
-- [[notes/Continuous Care|Continuous Care]]
+
 - [[notes/Fedora Linux|Fedora Linux]]
 - [[notes/Grammar et al|Grammar et al]]
-- [[notes/Micropolitan Statistical Area|Micropolitan Statistical Area]]
 - [[notes/MPV|MPV]]
 - [[notes/Python|Python]]
 - [[notes/Sans-serif|Sans-serif]]
 - [[notes/Serif|Serif]]
 - [[notes/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
-- [[notes/Sweep Your Mind|Sweep Your Mind]]
 
 <--->
-
 ## Lists
-- [[learning/Guitar|Guitar]] / [[learning/Meditation|Meditation]] / [[learning/Story Structure|Story Structure]]
+
 - [[lists/Bookmarklets|Bookmarklets]]
 - [[lists/Free Facts|Free Facts]]
 - [[lists/Inspiration|Inspiration]]
 - [[lists/Link Collection|Link Collection]]
-- [[lists/Music|Music]]
 - [[lists/Newsletters Collection|Newsletters Collection]]
 - [[lists/Podcast Colection|Podcast Colection]]
 - [[lists/Quotes Collection|Quotes Collection]]

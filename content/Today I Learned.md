@@ -4,16 +4,21 @@ title: Today I Learned
 
 ### Dyslexia
 
-> This website will try to show you how people with Dyslexia struggle everyday. [Check it out](https://geon.github.io/programming/2016/03/03/dsxyliea).
+> This website will try to show you how people with Dyslexia struggle everyday.
+
+{{< button href="https://geon.github.io/programming/2016/03/03/dsxyliea" >}}Check it out{{< /button >}}
 
 ### Gribble
 
-> Small marine isopod. Feeds on algae, driftwood, and submerged wood of docks and wharves. Up to 10mm in length. Gribbles have an organ called the hepatopancreas that extends almost the entire length of their bodies, where they make their own enzymes. Researchers hope to learn ways to improve the process of turning biomass into liquid fuels by studying gribbles. Read [more](https://en.wikipedia.org/wiki/Gribble).
+> Small marine isopod. Feeds on algae, driftwood, and submerged wood of docks and wharves. Up to 10mm in length. Gribbles have an organ called the hepatopancreas that extends almost the entire length of their bodies, where they make their own enzymes. Researchers hope to learn ways to improve the process of turning biomass into liquid fuels by studying gribbles.
+
+{{< button href="https://en.wikipedia.org/wiki/Gribble" >}}Read more{{< /button >}}
 
 ### Hypervitaminosis A — Polar Bear Liver Toxicity
 
 > An excess of the vitamin that can be contracted from eating the liver of polar bears, seals and walrus. Affecting the central nervous system, it can cause hair loss, extreme peeling of the skin, birth defects, liver problems, vomiting, blurred vision and even death. One officer swore never again to eat bear liver, no matter how much it might tempt him, after his crew showed symptoms akin to carbon monoxide poisoning. Native peoples have long been aware of this danger, as have explorers, though some felt no worse after eating the liver.
-> [Check it out](https://www.adn.com/alaska-life/we-alaskans/2017/02/05/the-perils-of-eating-polar-bear/).
+
+{{< button href="https://www.adn.com/alaska-life/we-alaskans/2017/02/05/the-perils-of-eating-polar-bear/" >}}Check it out{{< /button >}}
 
 ### Transcranial Magnetic Stimulation
 

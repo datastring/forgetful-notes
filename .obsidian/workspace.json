@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d84b6d8073213504",
+        "id": "287e36eb5be10e21",
         "type": "tabs",
         "children": [
           {
-            "id": "1c2ae017d9d0f834",
+            "id": "b4a2e464fca53dbd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -45,7 +45,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "setup/hosting",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -54,8 +54,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "d07ab736e135b499",
@@ -140,14 +139,20 @@
       "graph:Open graph view": false
     }
   },
-  "active": "0841d5ef9e5b3f13",
+  "active": "b4a2e464fca53dbd",
   "lastOpenFiles": [
+    "content/Today I Learned.md",
+    "content/templates/Button with Class.md",
+    "content/templates/Button.md",
+    "content/templates/Learning.md",
+    "content/templates/Frontmatter.md",
+    "content/_index.md",
+    "content/Features.md",
     "content/notes/Continuous Care.md",
     "content/notes/Chords.md",
     "content/notes/Atomic Notes.md",
     "content/notes/Arpeggio.md",
     "content/lists/_index.md",
-    "content/_index.md",
     "content/learning/Story Structure.md",
     "content/learning/Meditation.md",
     "content/learning/Guitar.md",
@@ -162,12 +167,6 @@
     "content/learning/_index.md",
     "content/journals/_index.md",
     "content/templates/Journal.md",
-    "content/templates/Learning.md",
-    "content/templates/Frontmatter.md",
-    "content/templates/_index.md",
-    "content/templates/Button.md",
-    "content/Tasks.md",
-    "content/Today I Learned.md",
     "public/lists/Snippets/index.html",
     "public/lists/Snippets",
     "content/image.png",
