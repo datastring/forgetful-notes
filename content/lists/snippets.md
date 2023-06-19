@@ -1,6 +1,6 @@
 ---
 title: Snippets
-draft: true
+# draft: true
 ---
 
 ## Buttons

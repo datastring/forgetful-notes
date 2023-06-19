@@ -1,7 +1,5 @@
 ---
 title: Journals
-# bookFlatSection: true
-# bookCollapseSection: true
 bookToc: false
 bookHidden: true
 weight: 20

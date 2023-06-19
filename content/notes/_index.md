@@ -6,6 +6,6 @@ title: Notes
 # bookComments: false
 # bookSearchExclude: false
 # weight: 1
-bookHidden: true
 # draft: true
+bookHidden: true
 ---

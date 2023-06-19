@@ -4,7 +4,7 @@ bookHidden: true
 weight: 40
 draft: true
 menu:
-  before:
+  after:
 ---
 
 - [ ] Task 1

@@ -12,7 +12,7 @@ Networked thinking can happen at many levels. A digital garden is a scalable way
 
 Gardens are _explorable_ rather than structured as a strictly linear stream of posts. They grow _slowly_ over time, rather than creating *"finished"* work that you never touch again. You revise, update, and change your ideas as they develop.
 
-### Website Stack
+## Website Stack
 
 Stressed Silica is hosted with [GitHub Pages](https://pages.github.com/), generated using [Hugo](https://gohugo.io/), and themed with [Amethyst](https://github.com/64bitpandas/amethyst), a free alternative to [Obsidian Publish](https://obsidian.md/publish) that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book). You can find the [Source Code](https://github.com/datastring/amethyst) of the site on GitHub.
 
@@ -22,7 +22,7 @@ Stressed Silica is hosted with [GitHub Pages](https://pages.github.com/), genera
 > This site is first and foremost designed for an audience size of one.
 > Please keep that in mind as you navigate around.
 >
-<img src="https://img.shields.io/github/last-commit/datastring/amethyst?style=for-the-badge" />
-<img src="https://img.shields.io/github/deployments/datastring/amethyst/github-pages?style=for-the-badge" />
-<img src="https://img.shields.io/github/repo-size/datastring/amethyst?style=for-the-badge" />
-<img src="https://img.shields.io/github/languages/code-size/datastring/amethyst?style=for-the-badge" />
+![last-commit](https://img.shields.io/github/last-commit/datastring/amethyst?style=for-the-badge)
+![deployment](https://img.shields.io/github/deployments/datastring/amethyst/github-pages?style=for-the-badge)
+![img](https://img.shields.io/github/repo-size/datastring/amethyst?style=for-the-badge)
+![img](https://img.shields.io/github/languages/code-size/datastring/amethyst?style=for-the-badge)

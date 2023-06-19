@@ -2,7 +2,7 @@
 title: Bookmarklets
 summary: "Bookmarklets Collection."
 bookToc: true
-draft: true
+# draft: true
 ---
 
 ## Font Finder

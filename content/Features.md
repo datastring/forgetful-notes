@@ -6,7 +6,7 @@ bookHidden: true
 # bookCollapseSection: true
 weight: 40
 menu:
-  before:
+  after:
 ---
 
 ## Buttons
