@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1259cdde05809c16",
+        "id": "bb31af10176ba743",
         "type": "tabs",
         "children": [
           {
-            "id": "7c2b372ff9f9d59c",
+            "id": "9ba1aacb4de79ee9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,8 +139,9 @@
       "graph:Open graph view": false
     }
   },
-  "active": "7c2b372ff9f9d59c",
+  "active": "9ba1aacb4de79ee9",
   "lastOpenFiles": [
+    "content/Tasks.md",
     "public/references/Skullcandy-Crusher-ANC/index.html",
     "public/references/Python/index.html",
     "public/references/Grammar/index.html",
@@ -151,7 +152,6 @@
     "public/references/index.html",
     "public/references/Grammar",
     "public/references/Amethyst",
-    "public/references",
     "content/lists/_index.md",
     "content/Today I Learned.md",
     "content/_index.md",
@@ -159,7 +159,6 @@
     "content/notes/Arpeggio.md",
     "content/notes/Chords.md",
     "content/Free Facts.md",
-    "content/Tasks.md",
     "content/journals/_index.md",
     "content/lists/Words Collection.md",
     "content/lists/Wishlist.md",
