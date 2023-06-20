@@ -12,18 +12,15 @@ Networked thinking can happen at many levels. A digital garden is a scalable way
 
 Gardens are _explorable_ rather than structured as a strictly linear stream of posts. They grow _slowly_ over time, rather than creating *"finished"* work that you never touch again. You revise, update, and change your ideas as they develop.
 
-## Guided Tour
-
 Here's a few links to help you navigate the garden.
 
 {{< columns >}}
+## Pages
+
 - [[Features]]
 - [[journals/_index|Journals]]
 - [[Tasks]]
 - [[Today I Learned]]
-
-## Loose Notes
-
 - [[notes/Fedora Linux|Fedora Linux]]
 - [[notes/Grammar et al|Grammar et al]]
 - [[notes/MPV|MPV]]
