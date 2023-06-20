@@ -2316,7 +2316,7 @@ var ObsidianLinksPlugin = class extends import_obsidian4.Plugin {
             });
           }
         }
-        if (linkData || selection && HasLinks(selection)) {
+        if (linkData && (linkData.type & 8 /* Autolink */) == 0 || selection && HasLinks(selection)) {
           addTopSeparator();
           menu.addItem((item) => {
             item.setTitle("Unlink").setIcon("unlink").onClick(() => {
@@ -2498,8 +2498,6 @@ var ObsidianLinksPlugin = class extends import_obsidian4.Plugin {
     }
   }
   convertLinkToWikiLink(linkData, editor) {
-    var _a;
-    console.log((_a = linkData.link) == null ? void 0 : _a.content);
     const link = linkData.type === 1 /* Markdown */ ? linkData.link ? decodeURI(linkData.link.content) : "" : linkData.link;
     const text = linkData.text ? linkData.text.content !== link ? "|" + linkData.text.content : "" : "";
     editor.replaceRange(
@@ -2841,7 +2839,6 @@ var ObsidianLinksSettingTab = class extends import_obsidian4.PluginSettingTab {
       });
     });
     const feature1SettingDesc = containerEl.querySelector(".setting-item--insider-feature1 .setting-item-description");
-    console.log(feature1SettingDesc);
     if (feature1SettingDesc) {
       feature1SettingDesc.appendText(" see ");
       feature1SettingDesc.appendChild(

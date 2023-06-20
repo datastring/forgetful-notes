@@ -1,5 +1,6 @@
 ---
-title: Features
+title: Amethyst
+# weight: 80
 ---
 
 ## Buttons

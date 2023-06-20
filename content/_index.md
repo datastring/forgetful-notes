@@ -17,14 +17,13 @@ Here's a few links to help you navigate the garden.
 {{< columns >}}
 ## Pages
 
-- [[Features]]
+- [[references/Amethyst]]
 - [[journals/_index|Journals]]
 - [[Tasks]]
 - [[Today I Learned]]
-- [[notes/Fedora Linux|Fedora Linux]]
-- [[references/Grammar et al|Grammar et al]]
+- [[references/Grammar|Grammar]]
 - [[notes/MPV|MPV]]
-- [[references/python|python]]
+- [[references/Python|Python]]
 - [[notes/Sans-serif|Sans-serif]]
 - [[notes/Serif|Serif]]
 - [[references/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
@@ -33,7 +32,7 @@ Here's a few links to help you navigate the garden.
 ## Lists
 
 - [[lists/Bookmarklets|Bookmarklets]]
-- [[lists/Free Facts|Free Facts]]
+- [[Free Facts|Free Facts]]
 - [[lists/Inspiration|Inspiration]]
 - [[lists/Link Collection|Link Collection]]
 - [[lists/Newsletters Collection|Newsletters Collection]]
@@ -46,9 +45,9 @@ Here's a few links to help you navigate the garden.
 
 {{</columns>}}
 
-## Website Stack
+## About this Website
 
-Stressed Silica is hosted with [GitHub Pages](https://pages.github.com/), generated using [Hugo](https://gohugo.io/), and themed with [Amethyst](https://github.com/64bitpandas/amethyst), a free alternative to [Obsidian Publish](https://obsidian.md/publish) that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book). You can find the [Source Code](https://github.com/datastring/amethyst) of the site on GitHub.
+Forgetful Notes is hosted with [GitHub Pages](https://pages.github.com/), generated using [Hugo](https://gohugo.io/), and themed with [Amethyst](https://github.com/64bitpandas/amethyst), a free alternative to [Obsidian Publish](https://obsidian.md/publish) that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book). You can find the [Source Code](https://github.com/datastring/amethyst) of the site on GitHub.
 
 > [!info] Heads-up!
 >

@@ -1,6 +1,5 @@
 ---
-title: Grammar et al
-summary: "."
+title: Grammar
 ---
 
 ## Using I.e. and E.g. Correctly

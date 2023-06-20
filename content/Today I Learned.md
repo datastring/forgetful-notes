@@ -1,5 +1,6 @@
 ---
 title: Today I Learned
+weight: 92
 ---
 
 ### Dyslexia
@@ -32,4 +33,4 @@ title: Today I Learned
 
 ### Yak Shaving
 
-> Programming lingo for the seemingly endless series of small tasks that have to be completed before the next step in a project can move forward. [Read more](https://en.wiktionary.org/wiki/yak_shaving)
+> Programming lingo for the seemingly endless series of small tasks that have to be completed before the next step in a project can move forward. [Read more](https://en.wiktionary.org/wiki/yak_shaving).
