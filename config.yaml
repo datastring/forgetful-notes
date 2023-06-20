@@ -1,4 +1,4 @@
-baseURL: https://stressed.dev/
+baseURL: https://forgetful.dev/
 
 # Book configuration
 disablePathToLower: true
@@ -25,13 +25,13 @@ markup:
   #     weight: 10
   # after:
     # - name: "Github"
-    #   url: "https://github.com/datastring/amethyst"
+    #   url: "https://github.com/datastring/forgetful-notes"
     #   weight: 10
 
 params:
 
   name: Miguel Pimentel
-  title: 🌴Stressed Silica🌴
+  title: 🌴Forgetful Notes🌴
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -70,7 +70,7 @@ params:
   enableMermaid: false
 
   # Link to your Github repo
-  GitHubLink: https://github.com/datastring/amethyst
+  GitHubLink: https://github.com/datastring/forgetful-notes
 
   # Search (WIP)
   search:
@@ -89,7 +89,7 @@ params:
     - link_name: GitHub
       link: https://github.com/datastring/
     - link_name: Source
-      link: https://github.com/datastring/amethyst/
+      link: https://github.com/datastring/forgetful-notes/
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
@@ -110,7 +110,7 @@ params:
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/datastring/amethyst
+  BookRepo: https://github.com/datastring/forgetful-notes
 
   # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
   # commit hash for 'doc' page type.
