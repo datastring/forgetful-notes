@@ -14,4 +14,4 @@ Micropolitan Statistical Areas are labor market and statistical areas in the Uni
 
 The designation was created in 2003 by the Office of Management and Budget (OMB). Micropolitan areas include the county where the urban cluster is and adjacent counties linked by commuting ties. The OMB has identified 543 micropolitan areas in the United States.
 
-<button class="bbutton" onclick="window.location.href=`/docs/lists/free-facts/`;"><span>Go back</span></button>
+{{< button relref="/lists/Free Facts" >}}Go back{{< /button >}}

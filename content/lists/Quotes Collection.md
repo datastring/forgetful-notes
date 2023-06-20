@@ -5,7 +5,7 @@ summary: "My Quotes Collection."
 
 ## Motivational Quotes
 
-> “Be regular and orderly in your life, so that you may be violent and zriginal in your work.”
+> “Be regular and orderly in your life, so that you may be violent and original in your work.”
 
 > "Better done than perfect." Perfectionism is nothing but _fear_. Conquer it.
 

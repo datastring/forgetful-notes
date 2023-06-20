@@ -75,7 +75,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
   sans-serif;
 ```
 
-### [Serif](./notes/serif.md)
+### [Serif](notes/Serif.md)
 
 ```css
 font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,

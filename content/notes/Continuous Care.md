@@ -7,4 +7,4 @@ Be the watchful caretaker of your ever growing plants and flowers. Grow your kno
 
 Taking raw notes is _useless_. Seed your garden with quality content and cultivate your curiosity. Plant seeds in your mind garden by taking smart personal notes. These don't need to be written in a publishable form.
 
-{{< button relref="/" >}}Get Home{{< /button >}}
+{{< button relref="/" >}}Go back{{< /button >}}

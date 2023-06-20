@@ -22,12 +22,12 @@ Here's a few links to help you navigate the garden.
 - [[Tasks]]
 - [[Today I Learned]]
 - [[notes/Fedora Linux|Fedora Linux]]
-- [[notes/Grammar et al|Grammar et al]]
+- [[references/Grammar et al|Grammar et al]]
 - [[notes/MPV|MPV]]
-- [[notes/Python|Python]]
+- [[references/python|python]]
 - [[notes/Sans-serif|Sans-serif]]
 - [[notes/Serif|Serif]]
-- [[notes/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
+- [[references/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
 
 <--->
 ## Lists

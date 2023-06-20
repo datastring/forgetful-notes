@@ -1,10 +1,10 @@
 ---
 title: Wishlist
-summary: "Items I want and plan on buying later."
+summary: "Items I want to and plan on buying later."
 bookToc: false
 ---
 
-Items I want and plan on buying later.
+Items I want to and plan on buying later:
 
 - **Valuable Humans in Transit and Other Stories** – [Book](https://qntm.org/vhitaos) – [Paperback](https://www.amazon.com/dp/B0BLGBZPJX)
 - **Practical Engineering** – [Book](https://practical.engineering/book)
