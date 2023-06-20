@@ -13,6 +13,12 @@ summary: "Compilation of words I like."
 1. The action of thinking deeply about something. Example: "Sorry, did I interrupt your cogitation?"
 2. The act of thinking very carefully about a subject, or the thoughts themselves.
 
+### Dinghy
+
+1. A small open boat carried or towed as a tender, lifeboat, or pleasure craft by a larger boat.
+2. A small rowboat or motorboat.
+3. An inflatable rubber life raft.
+
 ### Rue
 1. Any of various aromatic woody herbs or shrubs of the genus Ruta of the Mediterranean region and western Asia, especially the ornamental R. graveolens, having bipinnately compound leaves that yield an acrid volatile oil formerly used in medicine.
 2. Any of various other plants having similar foliage, such as meadow rue.

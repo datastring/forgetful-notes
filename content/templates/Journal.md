@@ -1,7 +1,7 @@
 ---
-title: {{ title }}
-summary: "."
-date: {{ date}}
+title: 
+summary: 
+date: 
 bookHidden: true
 ---
 
@@ -9,4 +9,4 @@ bookHidden: true
 
 - 
 
-<a class="link_button_back" href="/docs/journals/"><span>Go back</span></a>
+{{< button relref="/journals" >}}Go back{{< /button >}}
