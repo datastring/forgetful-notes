@@ -15,5 +15,7 @@
     "layouts/"
   ],
   "autoPairMarkdown": false,
-  "livePreview": true
+  "livePreview": true,
+  "attachmentFolderPath": "./",
+  "autoConvertHtml": false
 }

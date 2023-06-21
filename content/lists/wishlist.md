@@ -12,3 +12,4 @@ Items I want to and plan on buying later.
 - **EVGA Z12** – [Computer Keyboard](https://www.evga.com/products/product.aspx?pn=834-W0-12US-KR) – [Alt Link](https://www.amazon.com/EVGA-Z12-Programmable-Dedicated-834-W0-12US-KR/dp/B09C2DLCPG)
 - **Seche Clear and Vive Duo Kit** – [Base/Top Nail Polish](https://www.seche.com/seche-clear-vive-duo-kit.html)
 - **Valuable Humans in Transit and Other Stories** – [Book](https://qntm.org/vhitaos) – [Paperback](https://www.amazon.com/dp/B0BLGBZPJX)
+- **The Subtle Art of Not Giving a Fuck: A Counterintuitive Approach to Living a Good Life** – [Book](https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457713) – [Paperback](https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/0062457721)
