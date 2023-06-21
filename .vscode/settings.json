@@ -40,8 +40,5 @@
         "y"
     ],
     "frontMatter.taxonomy.categories": [],
-    "github-actions.workflows.pinned.workflows": [
-        ".github/workflows/deploy.yaml",
-        "dynamic/pages/pages-build-deployment"
-    ]
+    "github-actions.workflows.pinned.workflows": []
 }

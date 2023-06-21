@@ -1,35 +1,34 @@
 ---
-title: Links I Frequent
+title: Links Collection
 ---
 
-- [Fastmail](https://app.fastmail.com/mail/)
-- [TickTick](https://ticktick.com/webapp)
-- [Raindrop](https://app.raindrop.io/)
-- [Hacker News](https://news.ycombinator.com/)
-- [Youtube](https://www.youtube.com/)
-- [LoFi ATC](https://www.lofiatc.com/?icao=KMSP)
-- [AMO Hub](https://addons.mozilla.org/en-US/developers/addons)
-- [MDN Docs](https://developer.mozilla.org/en-US/)
-- [GitHub Repos](https://github.com/datastring?tab=repositories)
-- [GitHub Gists](https://gist.github.com/datastring)
-- [Hug Codex](https://miguelpimentel.do/)
-- [Forgetful Notes](https://forgetful.dev/)
-- [Goblin Tools](https://goblin.tools/)
-- [Code Radio](https://coderadio.freecodecamp.org/)
-- [Spotify](https://open.spotify.com/)
-- [Stressed](https://stressed.dev/)
-- [DEV Community](https://dev.to/)
-- [Slashdot](https://slashdot.org/)
-<!-- [Reddit] -->
+## Links I Frequent
 
-## CSS Themes and Frameworks
+- [Fastmail](https://app.fastmail.com/mail/) – Email Host
+- [TickTick](https://ticktick.com/webapp) – Task Manager
+- [Raindrop](https://app.raindrop.io/) – Bookmarks Manager
+- [LoFi ATC](https://www.lofiatc.com/?icao=KMSP) – LoFi Radio plus Air Traffic Control audio
+- [Code Radio](https://coderadio.freecodecamp.org/) – LoFi Radio by FreeCodeCamp
+- [AMO Hub](https://addons.mozilla.org/en-US/developers/addons) – Firefox Addons Hub
+- [MDN Docs](https://developer.mozilla.org/en-US/) – HTML/CSS/JS Reference
+- [GitHub Repos](https://github.com/datastring?tab=repositories)  – My GitHub Repositories
+- [GitHub Gists](https://gist.github.com/datastring) – My GitHub Gists
+- [Hug Codex](https://miguelpimentel.do/) – Personal Website and Blog
+- [Forgetful Notes](https://forgetful.dev/) – My Digital Garden
+- [Goblin Tools](https://goblin.tools/) – AI powered tools
+- [DEV Community](https://dev.to/) – Social Site for Developers
+- [Hacker News](https://news.ycombinator.com/) – Social Site for Techies
+- [Slashdot](https://slashdot.org/) – Tech News Aggregator
+- [Spike.News](https://spike.news/) – News Aggregator
+
+## CSS Frameworks and Themes
 
 - [Bamboo CSS](https://github.com/rilwis/bamboo)
-- [BareCSS](https://github.com/ericclemmons/bare-css)
 - [Holiday.css](https://github.com/EvgenyOrekhov/holiday.css)
+- [Water.css](https://github.com/kognise/water.css)
+- [BareCSS](https://github.com/ericclemmons/bare-css)
 - [New.css](https://github.com/xz/new.css)
 - [Sakura](https://github.com/oxalorg/sakura)
-- [Water.css](https://github.com/kognise/water.css)
 
 ## Links to Organize
 

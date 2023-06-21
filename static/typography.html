@@ -1,0 +1,187 @@
+<!-- source: https://github.com/azlen/typography -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Typography</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Open Sans", sans-serif;
+            position: absolute;
+            z-index: -1;
+            background: #fff;
+            color: #222;
+            display: flex;
+            align-items: center;
+        }
+
+        body.dark {
+            background: #222;
+            color: #fff;
+        }
+
+        #container {
+            margin: auto;
+            width: 900px;
+        }
+
+        #title {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 40px;
+            display: block;
+            margin: 0;
+        }
+
+        #description {
+            text-align: center;
+            font-size: 20px;
+            description: none;
+        }
+
+        .typography {
+            -webkit-transition: all .2s, opacity .5s;
+            -moz-transition: all .2s, opacity .5s;
+            -o-transition: all .2s, opacity .5s;
+            transition: all .2s, opacity .5s;
+            display: inline-block;
+            white-space: pre;
+        }
+
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .notransition {
+            -webkit-transition-duration: 0s !important;
+            -moz-transition-duration: 0s !important;
+            -o-transition-duration: 0s !important;
+            transition-duration: 0s !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title">The quick brown fox jumps over the lazy dog.</h1>
+    </div>
+
+    <script>
+        /*function splitText(element) {
+          this.lines = [];
+          this.words = [];
+          this.chars = [];
+          var prevlen = 0;
+          for(var i = 0; i < element.childNodes.length; i++) {
+            if(element.childNodes[i].nodeType == 3) {
+              var text = element.childNodes[i];
+              console.log(text);
+              var frag = document.createDocumentFragment();
+              for(var i2 = 0; i2 < text.textContent.length; i2++) {
+                var span = document.createElement('span');
+                span.classList.add('char');
+                span.textContent = text.textContent[i2];
+                frag.appendChild(span);
+              }
+              element.replaceChild(frag, text)
+              prevlen += text.length;
+            }
+          }
+        }*/
+
+        function typography(element) {
+            var prevlen = 0;
+            for (var i = 0; i < element.childNodes.length; i++) {
+                if (element.childNodes[i].nodeType == 3) {
+                    var text = element.childNodes[i];
+                    console.log(element.textContent);
+                    var frag = document.createDocumentFragment();
+                    for (var i2 = 0; i2 < text.textContent.length; i2++) {
+                        var span = document.createElement('span');
+                        span.classList.add('typography');
+                        span.classList.add('hidden');
+                        span.classList.add('notransition');
+                        span.textContent = text.textContent[i2];
+                        frag.appendChild(span);
+                        (function (a) {
+                            setTimeout(function () {
+                                chainTransforms(a, randomTransforms(random(3, 8)))
+                                a.classList.remove('hidden');
+                            }, /*(prevlen+i2)*100*/ random(2, 10) * 100);
+                        })(span);
+
+                    }
+                    element.replaceChild(frag, text)
+                    prevlen += text.length;
+                }
+            }
+        }
+
+        function chainTransforms(element, transforms, notfirst) {
+            element.style.transform = transforms.join(' ');
+            element.style.webkitTransform = transforms.join(' ');
+            console.log(transforms);
+
+            if (transforms.length == 0) {
+                return;
+            }
+
+            element.addEventListener('transitionend', function () {
+                transforms.pop();
+                element.removeEventListener('transitionend', arguments.callee)
+                setTimeout(function () {
+                    chainTransforms(element, transforms);
+                }, 100)
+            });
+
+            element.classList.remove('notransition')
+        }
+        window.addEventListener('load', function () {
+            typography(document.querySelector('#title'))
+        })
+
+        function random(a, b) {
+            return Math.random() * (b - a) + a;
+        }
+
+        function randomTransforms(n) {
+            var array = [];
+            var transforms = [
+                ['rotate(', [-270, 270], 'deg)'],
+                ['translateX(', [-100, 100], 'px)'],
+                ['translateY(', [-100, 100], 'px)'],
+                ['scale(', [0.2, 2], ')'],
+                ['translate(', [-100, 100], 'px,', [-100, 100], 'px)'],
+                ['skew(', [-30, 30], 'deg,', [-30, 30], 'deg)'],
+                //['scaleX(', [0.2, 2], ')'],
+                //['scaleY(', [0.2, 2], ')'],
+            ];
+            for (var i = 0; i < n; i++) {
+                var rand = Math.round(random(0, transforms.length - 1));
+                var transform = transforms[rand].map(function (a) {
+                    if (a.constructor == Array) {
+                        return Math.floor(random(a[0], a[1]) * 10) / 10;
+                    }
+                    return a;
+                }).join('');
+                //transforms.splice(rand, 1)
+                array.push(transform);
+            }
+            return array;
+        }
+
+    </script>
+
+</body>
+
+</html>
