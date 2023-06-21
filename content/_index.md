@@ -18,7 +18,6 @@ Here's a few links to help you navigate the garden.
 
 ## Pages
 
-- [[references/Amethyst|Amethyst]]
 - [[journals/_index|Journals]]
 - [[Tasks]]
 - [[Today I Learned]]
@@ -28,17 +27,19 @@ Here's a few links to help you navigate the garden.
 - [[notes/Sans-serif|Sans-serif]]
 - [[notes/Serif|Serif]]
 - [[references/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
+- [[changelog|Changelog]]
 
 <--->
 ## Lists
 
 - [[lists/bookmarklets|Bookmarklets]]
+- [[cool things|Cool Things]]
 - [[lists/Inspiration|Inspiration]]
 - [[lists/link collection|Link Collection]]
 - [[lists/newsletters collection|Newsletters Collection]]
 - [[lists/podcast collection|Podcast Collection]]
 - [[lists/quotes collection|Quotes Collection]]
-- [[lists/Snippets|Snippets]]
+- [[snippets|Snippets]]
 - [[lists/tools collection|Tools Collection]]
 - [[lists/Wishlist|Wishlist]]
 - [[lists/words collection|Words Collection]]

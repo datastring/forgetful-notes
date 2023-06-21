@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dbfc78958d11188e",
+        "id": "5414e12933af9a3e",
         "type": "tabs",
         "children": [
           {
-            "id": "9d822f86214a0be5",
+            "id": "3a3ebcbf5503c132",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/cool things.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -66,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/cool things.md"
+              }
             }
           },
           {
@@ -75,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/cool things.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/cool things.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,24 +155,25 @@
       "graph:Open graph view": false
     }
   },
-  "active": "9d822f86214a0be5",
+  "active": "3a3ebcbf5503c132",
   "lastOpenFiles": [
-    "public/lists/life-lessons/index.html",
-    "public/lists/life-lessons",
-    "public/typography.html",
-    "public/games/Grim-Dawn/index.html",
-    "public/games/Elden-Ring/index.html",
-    "public/games/index.xml",
-    "public/games/index.html",
-    "public/games/Grim-Dawn",
-    "public/games/Elden-Ring",
-    "public/games",
-    "public/cool-things/index.html",
+    "content/_index.md",
+    "content/about.md",
+    "static/extras/OpenSans-Regular.woff",
+    "static/extras/MavenPro-Regular.woff",
+    "static/extras/OpenSans-600.woff",
+    "static/extras/MavenPro-500.woff",
+    "static/extras/jquery-3.6.0.min.js",
+    "static/extras/IBMPlexSans-Medium.woff",
+    "static/extras/favicon-16.png",
+    "static/extras/IBMPlexSans-Regular.woff",
+    "static/extras/Barlow-Regular.woff",
+    "static/extras/Barlow-Medium.woff",
+    "static/extras",
     "content/cool things.md",
+    "content/changelog.md",
     "content/snippets.md",
     "content/lists/link collection.md",
-    "content/changelog.md",
-    "content/_index.md",
     "content/lists/wishlist.md",
     "content/tasks.md",
     "content/Today I Learned.md",
@@ -190,7 +199,6 @@
     "content/templates/Learning.md",
     "content/templates/Journal.md",
     "content/templates/Button (class).md",
-    "content/templates/Button (href).md",
     "content/image.png",
     "content/learning/guitar/cover-image-guitar.png"
   ]
