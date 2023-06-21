@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0e71a137b0bd0059",
+        "id": "7d5f4d88a1385186",
         "type": "tabs",
         "children": [
           {
-            "id": "5292f6cb1a55044c",
+            "id": "51d91470f56f98d5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -147,8 +147,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "5292f6cb1a55044c",
+  "active": "51d91470f56f98d5",
   "lastOpenFiles": [
+    "content/learning/poetry.md",
+    "content/templates/Quote.md",
+    "content/lists/quotes collection.md",
     "content/snippets.md",
     "content/cool things.md",
     "public/nullboard.html",
@@ -172,7 +175,6 @@
     "content/Today I Learned.md",
     "content/lists/life lessons.md",
     "content/lists/procrastination.md",
-    "content/lists/quotes collection.md",
     "content/quotes collection test.md",
     "content/lists/snippets.md",
     "content/lists/tools collection.md",
@@ -191,7 +193,6 @@
     "content/templates/YAML Front Matter.md",
     "content/templates/Learning.md",
     "content/templates/Journal.md",
-    "content/templates/Button (class).md",
     "content/image.png",
     "content/learning/guitar/cover-image-guitar.png"
   ]

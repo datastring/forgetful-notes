@@ -13,7 +13,7 @@ weight: 88
 {{</* button href="https://github.com/alex-shpak/hugo-book" */>}}Contribute{{</* /button */>}}
 ```
 
-{{< button relref="/" >}}Get Home{{< /button >}}
+{{< button relref="/" >}}Go Home{{< /button >}}
 {{< button href="https://github.com/alex-shpak/hugo-book" >}}Contribute{{< /button >}}
 
 ## Font Stacks
