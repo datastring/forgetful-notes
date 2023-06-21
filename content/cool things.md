@@ -2,7 +2,7 @@
 title: Cool Things
 ---
 
-## Check This Out
+## Check These Out
 
-- [Typography](/typography) – Flying Letters
-- [Nullboard](/nullboard) – Minimalist Kanban board.
+- [Typography](https://forgetful.dev/typography.html) – Flying Letters Style Showcase
+- [Nullboard](https://forgetful.dev/nullboard.html) – Minimalist Kanban board
