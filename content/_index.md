@@ -4,11 +4,11 @@ title: Welcome to my Digital Garden
 
 ## What is a Digital Garden?
 
-A digital garden is a combination of an **online notebook** and a **personal Wiki**, where digital gardeners write in small, unfinished pieces, also known as [[notes/Atomic Notes|atomic notes]], and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
+A digital garden is a combination of an **online notebook** and a **personal Wiki**, where digital gardeners write in small, unfinished pieces, also known as [[notes/atomic notes|atomic notes]], and share these _seeds of thought_ to be cultivated in public. Digital gardens are curated and evolve over time, sometimes growing wildly and sometimes getting pruned.
 
 The phrase "digital garden" comes up _often_ while browsing these notes. Surely I overuse it. That said, I still like it. It more closely describes what I envision this website to be: a carefully curated garden of digital notes. Having a reliable system on which to dump raw information is extremely useful. The idea of [[content/notes/Sweep Your Mind|sweeping]] one's mind is helpful to rid yourself of distractions from incorrectly prioritized tasks.
 
-Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. [[notes/Continuous Care|Continuous care]]. [Continuous care](notes/Continuous Care) in creating and maintaining a digital garden eventually yields fruits. (pun intended)
+Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. [[notes/continuous care|Continuous care]]. [Continuous care](notes/Continuous Care) in creating and maintaining a digital garden eventually yields fruits. (pun intended)
 
 Gardens are _explorable_ rather than structured as a strictly linear stream of posts. They grow _slowly_ over time, rather than creating *"finished"* work that you never touch again. You revise, update, and change your ideas as they develop.
 
@@ -19,10 +19,10 @@ Here's a few links to help you navigate the garden.
 
 - [[references/Amethyst]]
 - [[journals/_index|Journals]]
-- [[Tasks]]
+- [[tasks]]
 - [[Today I Learned]]
-- [[references/Grammar|Grammar]]
-- [[notes/MPV|MPV]]
+- [[references/grammar|grammar]]
+- [[notes/MPV Player|MPV Player]]
 - [[references/Python|Python]]
 - [[notes/Sans-serif|Sans-serif]]
 - [[notes/Serif|Serif]]
@@ -31,17 +31,17 @@ Here's a few links to help you navigate the garden.
 <--->
 ## Lists
 
-- [[lists/Bookmarklets|Bookmarklets]]
+- [[lists/bookmarklets|bookmarklets]]
 - [[Free Facts|Free Facts]]
 - [[lists/Inspiration|Inspiration]]
-- [[lists/Link Collection|Link Collection]]
-- [[lists/Newsletters Collection|Newsletters Collection]]
-- [[lists/Podcast Colection|Podcast Colection]]
-- [[lists/Quotes Collection|Quotes Collection]]
+- [[lists/link collection|link collection]]
+- [[lists/newsletters collection|newsletters collection]]
+- [[lists/podcast collection|podcast collection]]
+- [[lists/quotes collection|quotes collection]]
 - [[lists/Snippets|Snippets]]
-- [[lists/Tools Collection|Tools Collection]]
+- [[lists/tools collection|tools collection]]
 - [[lists/Wishlist|Wishlist]]
-- [[lists/Words Collection|Words Collection]]
+- [[lists/words collection|words collection]]
 
 {{</columns>}}
 

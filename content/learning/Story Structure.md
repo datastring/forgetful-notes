@@ -1,5 +1,6 @@
 ---
 title: Story Structure
+alias: Learn Story Structure
 summary: "Dan Harmon walks us through Story Structure 101 thru 106."
 ---
 

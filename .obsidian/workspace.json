@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bb31af10176ba743",
+        "id": "82ccc88b5cb15fe5",
         "type": "tabs",
         "children": [
           {
-            "id": "9ba1aacb4de79ee9",
+            "id": "fdcfbf858d254364",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -27,7 +27,7 @@
       {
         "id": "1c55cf7b430869fa",
         "type": "tabs",
-        "dimension": 59.03846153846154,
+        "dimension": 65.96153846153847,
         "children": [
           {
             "id": "31d00d2b801ee55c",
@@ -59,7 +59,7 @@
       {
         "id": "d07ab736e135b499",
         "type": "tabs",
-        "dimension": 40.96153846153846,
+        "dimension": 34.03846153846154,
         "children": [
           {
             "id": "c9c7aa720b6cf5c8",
@@ -131,17 +131,42 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "daily-notes:Open today's daily note": false,
       "obsidian-custom-frames:Open Hugo Preview": false,
       "switcher:Open quick switcher": false,
       "command-palette:Open command palette": false,
-      "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "graph:Open graph view": false
     }
   },
-  "active": "9ba1aacb4de79ee9",
+  "active": "fdcfbf858d254364",
   "lastOpenFiles": [
-    "content/Tasks.md",
+    "content/Today I Learned.md",
+    "content/Free Facts.md",
+    "content/tasks.md",
+    "content/_index.md",
+    "content/templates/YAML Front Matter.md",
+    "content/templates/Learning.md",
+    "content/templates/Journal.md",
+    "content/templates/Button (class).md",
+    "content/templates/Button (href).md",
+    "content/templates/Button (rel).md",
+    "content/references/grammar.md",
+    "content/references/Amethyst.md",
+    "content/notes/Sweep Your Mind.md",
+    "content/notes/sans-serif.md",
+    "content/notes/MPV Player.md",
+    "content/notes/Micropolitan Statistical Area.md",
+    "content/notes/continuous care.md",
+    "content/notes/chords.md",
+    "content/notes/atomic notes.md",
+    "content/notes/arpeggio.md",
+    "content/learning/story structure.md",
+    "content/learning/meditation.md",
+    "content/learning/guitar.md",
+    "content/lists/words collection.md",
+    "content/lists/tools collection.md",
+    "content/lists/quotes collection.md",
     "public/references/Skullcandy-Crusher-ANC/index.html",
     "public/references/Python/index.html",
     "public/references/Grammar/index.html",
@@ -152,30 +177,6 @@
     "public/references/index.html",
     "public/references/Grammar",
     "public/references/Amethyst",
-    "content/lists/_index.md",
-    "content/Today I Learned.md",
-    "content/_index.md",
-    "content/notes/Micropolitan Statistical Area.md",
-    "content/notes/Arpeggio.md",
-    "content/notes/Chords.md",
-    "content/Free Facts.md",
-    "content/journals/_index.md",
-    "content/lists/Words Collection.md",
-    "content/lists/Wishlist.md",
-    "content/learning/Guitar.md",
-    "content/learning/_index.md",
-    "content/lists/Newsletters Collection.md",
-    "content/lists/Music.md",
-    "content/lists/Link Collection.md",
-    "content/lists/Podcast Colection.md",
-    "content/lists/Quotes Collection.md",
-    "content/lists/Snippets.md",
-    "content/lists/Tools Collection.md",
-    "content/lists/Inspiration.md",
-    "content/references/Python.md",
-    "content/references/Skullcandy Crusher ANC.md",
-    "content/references/Grammar.md",
-    "content/references/Amethyst.md",
     "content/image.png",
     "content/learning/guitar/cover-image-guitar.png"
   ]

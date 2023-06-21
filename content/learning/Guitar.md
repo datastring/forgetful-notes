@@ -1,5 +1,6 @@
 ---
 title: Guitar
+alias: Learn Guitar
 tags: guitar
 summary: "Simply learning how to play the guitar."
 ---
@@ -8,9 +9,11 @@ summary: "Simply learning how to play the guitar."
 
 When you are looking at a tab, you will see six horizontal lines. These lines represent the strings of the guitar. The bottom line is the 6th string (the thickest string on your guitar, low e) and the top line is the thinnest string (the first string, high e).
 
-###  [[../notes/Arpeggio|Arpeggio]]
+###  Arpeggio
 
-```markdown
+An [[../notes/arpeggio|arpeggio]] is a type of [[../notes/chords|broken chord]] in which the notes that compose a chord are individually sounded in a progressive rising or descending order. Arpeggios on keyboard instruments may be called *rolled chords*.
+
+```md
 e|--------2-----------------|
 B|------3---3---------------|
 G|----2-------2-------------|
@@ -21,7 +24,7 @@ E|--------------------------|
 
 ### Metallica – Enter the Sandman (Intro)
 
-```markdown
+```md
 e|---------------------|------------------|---------------|--------------------|
 B|---------------------|------------------|---------------|--------------------|
 G|---------------------|------------------|---------------|--------------------|

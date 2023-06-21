@@ -19,6 +19,14 @@ weight: 92
 
 > An excess of the vitamin that can be contracted from eating the liver of polar bears, seals and walrus. Affecting the central nervous system, it can cause hair loss, extreme peeling of the skin, birth defects, liver problems, vomiting, blurred vision and even death. One officer swore never again to eat bear liver, no matter how much it might tempt him, after his crew showed symptoms akin to carbon monoxide poisoning. Native peoples have long been aware of this danger, as have explorers, though some felt no worse after eating the liver. [Check it out](https://www.adn.com/alaska-life/we-alaskans/2017/02/05/the-perils-of-eating-polar-bear/).
 
+### Minnesota State Capitol
+
+>The Minnesota State Capitol dome is the second largest self-supported marble dome in the world, behind Saint Peter's Basilica in the Vatican.
+
+### Nubian Pyramids
+
+> Sudan has the most pyramids out of any country in the world. 138 pyramids have been discovered in Egypt, while Sudan has uncovered around 255. Known as the Nubian pyramids, ancient Kushite kingdoms built these drawing heavy influence from the Egyptians. Built some 1,000 years after Egyptian burial methods had changed.
+
 ### Transcranial Magnetic Stimulation
 
 > Noninvasive form of brain stimulation in which a changing magnetic field is used to induce an electric current at a specific area of the brain through electromagnetic induction. An electric pulse generator, or stimulator, is connected to a magnetic coil connected to the scalp. [Read more](https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation).
