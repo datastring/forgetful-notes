@@ -1,5 +1,6 @@
 ---
 title: Cool Things
+weight: 76
 ---
 
 ## Check These Out
