@@ -4,11 +4,11 @@
     "archetypes",
     "static",
     "resources",
-    "public",
     "images",
     "i18n",
     "data",
     "assets",
-    "layouts"
+    "layouts",
+    "public"
   ]
 }

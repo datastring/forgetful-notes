@@ -8,7 +8,7 @@ A digital garden is a combination of an **online notebook** and a **personal Wik
 
 The phrase "digital garden" comes up _often_ while browsing these notes. Surely I overuse it. That said, I still like it. It more closely describes what I envision this website to be: a carefully curated garden of digital notes. Having a reliable system on which to dump raw information is extremely useful. The idea of [[content/notes/Sweep Your Mind|sweeping]] one's mind is helpful to rid yourself of distractions from incorrectly prioritized tasks.
 
-Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. [[notes/continuous care|Continuous care]]. [Continuous care](notes/Continuous Care) in creating and maintaining a digital garden eventually yields fruits. (pun intended)
+Networked thinking can happen at many levels. A digital garden is a scalable way to transform seeds of information into original work and to go from collector to creator. A place where little changes accumulate and transform thoughts and ideas. [[notes/continuous care|Continuous care]] in creating and maintaining a digital garden eventually yields fruits. (pun intended)
 
 Gardens are _explorable_ rather than structured as a strictly linear stream of posts. They grow _slowly_ over time, rather than creating *"finished"* work that you never touch again. You revise, update, and change your ideas as they develop.
 
