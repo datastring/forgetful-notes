@@ -1,4 +1,4 @@
 ---
 title: Games
-hiddenBook: true
+bookHidden: true
 ---

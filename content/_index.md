@@ -17,11 +17,11 @@ Here's a few links to help you navigate the garden.
 {{< columns >}}
 ## Pages
 
-- [[references/Amethyst]]
+- [[references/Amethyst|Amethyst]]
 - [[journals/_index|Journals]]
-- [[tasks]]
+- [[Tasks]]
 - [[Today I Learned]]
-- [[references/grammar|grammar]]
+- [[references/grammar|Grammar]]
 - [[notes/MPV Player|MPV Player]]
 - [[references/Python|Python]]
 - [[notes/Sans-serif|Sans-serif]]
@@ -31,31 +31,23 @@ Here's a few links to help you navigate the garden.
 <--->
 ## Lists
 
-- [[lists/bookmarklets|bookmarklets]]
-- [[Free Facts|Free Facts]]
+- [[lists/bookmarklets|Bookmarklets]]
 - [[lists/Inspiration|Inspiration]]
-- [[lists/link collection|link collection]]
-- [[lists/newsletters collection|newsletters collection]]
-- [[lists/podcast collection|podcast collection]]
-- [[lists/quotes collection|quotes collection]]
+- [[lists/link collection|Link Collection]]
+- [[lists/newsletters collection|Newsletters Collection]]
+- [[lists/podcast collection|Podcast Collection]]
+- [[lists/quotes collection|Quotes Collection]]
 - [[lists/Snippets|Snippets]]
-- [[lists/tools collection|tools collection]]
+- [[lists/tools collection|Tools Collection]]
 - [[lists/Wishlist|Wishlist]]
-- [[lists/words collection|words collection]]
+- [[lists/words collection|Words Collection]]
 
 {{</columns>}}
 
-## About this Website
-
-Forgetful Notes is hosted with [GitHub Pages](https://pages.github.com/), generated using [Hugo](https://gohugo.io/), and themed with [Amethyst](https://github.com/64bitpandas/amethyst), a free alternative to [Obsidian Publish](https://obsidian.md/publish) that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book). You can find the [Source Code](https://github.com/datastring/amethyst) of the site on GitHub.
-
-> [!info] Heads-up!
+> [!info] Info
+> 
+> Forgetful Notes is hosted with [GitHub Pages](https://pages.github.com/), generated using [Hugo](https://gohugo.io/), and themed with [Amethyst](https://github.com/64bitpandas/amethyst), a free alternative to [Obsidian Publish](https://obsidian.md/publish) that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book). You can find the [Source Code](https://github.com/datastring/amethyst) of the site on GitHub.
 >
 > This site is a living document. Expect changes at all content levels.
 > This site is first and foremost designed for an audience size of one.
 > Please keep that in mind as you navigate around.
->
-![last-commit](https://img.shields.io/github/last-commit/datastring/amethyst?style=for-the-badge)
-![deployment](https://img.shields.io/github/deployments/datastring/amethyst/github-pages?style=for-the-badge)
-![img](https://img.shields.io/github/repo-size/datastring/amethyst?style=for-the-badge)
-![img](https://img.shields.io/github/languages/code-size/datastring/amethyst?style=for-the-badge)

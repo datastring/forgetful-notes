@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0750cbf2bea4c6f8",
+        "id": "742d9a1f84e99b20",
         "type": "tabs",
         "children": [
           {
-            "id": "660b4c8044b030c8",
+            "id": "6969b5664a4ccf0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/tasks.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/_index.md"
+                "file": "content/tasks.md"
               }
             }
           },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,17 +155,17 @@
       "graph:Open graph view": false
     }
   },
-  "active": "660b4c8044b030c8",
+  "active": "6969b5664a4ccf0b",
   "lastOpenFiles": [
+    "README.md",
+    "content/_index.md",
+    "content/games/_index.md",
     "content/games/Elden Ring.md",
     "content/games/Grim Dawn.md",
-    "content/games/_index.md",
     "content/tasks.md",
     "content/games",
     "content/lists/procrastination.md",
     "content/Today I Learned.md",
-    "content/_index.md",
-    "README.md",
     "public/index.xml",
     "public/404.html",
     "public/sitemap.xml",
