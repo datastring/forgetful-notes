@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "73a466ce05aee26d",
+        "id": "4be46c32944aa604",
         "type": "tabs",
         "children": [
           {
-            "id": "11db7c22b4a268ef",
+            "id": "6d51a1f432cba42b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -147,8 +147,9 @@
       "graph:Open graph view": false
     }
   },
-  "active": "11db7c22b4a268ef",
+  "active": "6d51a1f432cba42b",
   "lastOpenFiles": [
+    "content/_index.md",
     "content/lists/wishlist.md",
     "content/tasks.md",
     "content/Today I Learned.md",
@@ -159,7 +160,6 @@
     "content/lists/snippets.md",
     "content/lists/tools collection.md",
     "content/lists/words collection.md",
-    "content/_index.md",
     "README.md",
     "content/games/_index.md",
     "content/games/Elden Ring.md",
