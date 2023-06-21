@@ -1,5 +1,5 @@
 ---
-title: Old Blog
+title: Old Blog - El Baul de Pensamientos
 weight: 109
 bookCollapseSection: true
 # bookFlatSection: false
@@ -7,7 +7,6 @@ bookCollapseSection: true
 # bookHidden: false
 # bookComments: false
 # bookSearchExclude: false
----
 ---
 
 {{<section>}}
