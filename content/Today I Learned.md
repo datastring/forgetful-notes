@@ -19,9 +19,11 @@ weight: 92
 
 > An excess of the vitamin that can be contracted from eating the liver of polar bears, seals and walrus. Affecting the central nervous system, it can cause hair loss, extreme peeling of the skin, birth defects, liver problems, vomiting, blurred vision and even death. One officer swore never again to eat bear liver, no matter how much it might tempt him, after his crew showed symptoms akin to carbon monoxide poisoning. Native peoples have long been aware of this danger, as have explorers, though some felt no worse after eating the liver. [Check it out](https://www.adn.com/alaska-life/we-alaskans/2017/02/05/the-perils-of-eating-polar-bear/).
 
-### Minnesota State Capitol
+### Minnesota
 
 >The Minnesota State Capitol dome is the second largest self-supported marble dome in the world, behind Saint Peter's Basilica in the Vatican.
+
+>Minnesota is the only state that is the only source of three major rivers: the Mississippi, Red River of the North, and the Saint Louis River. In fact, Minnesota is the only state where water only flows out from, and not into. It has been called the "Center of the water universe of North America." Its waters flow to the Gulf of Mexico, Great Lakes, Hudson Bay, and Arctic Ocean.
 
 ### Nubian Pyramids
 
