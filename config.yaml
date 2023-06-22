@@ -2,7 +2,7 @@ baseURL: https://forgetful.dev/
 
 # Book configuration
 disablePathToLower: true
-enableGitInfo: false
+enableGitInfo: true
 
 # # Needed for mermaid/katex shortcodes
 markup:
@@ -31,7 +31,7 @@ markup:
 params:
 
   name: Miguel Pimentel
-  title: 🌴Forgetful Notes🌴
+  title: 🌴Forgetful Notes
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -41,7 +41,7 @@ params:
 
   # Enable rendering of LaTeX blocks
   # (surrounded by either single or double dollar signs)
-  enableLatex: false
+  enableLatex: true
 
   # whether to render titles for code blocks
   enableCodeBlockTitle: true
@@ -60,7 +60,7 @@ params:
   enableContextualBacklinks: true
 
   # whether to show a section of recent notes on the home page
-  enableRecentNotes: false
+  enableRecentNotes: true
 
   # whether to display an 'edit' button next to the last edited field
   # that links to github
