@@ -16,7 +16,7 @@ Here's a few links to help you navigate the garden.
 
 {{< columns >}}
 
-## Pages
+### Pages
 
 - [[journals/_index|Journals]]
 - [[Tasks]]
@@ -29,8 +29,12 @@ Here's a few links to help you navigate the garden.
 - [[references/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
 - [[changelog|Changelog]]
 
+### Cool
+- [Typography](https://forgetful.dev/typography.html) – Flying Letters Style Showcase
+- [Nullboard](https://forgetful.dev/nullboard.html) – Minimalist Kanban board
+
 <--->
-## Lists
+### Lists
 
 - [[lists/bookmarklets|Bookmarklets]]
 - [[cool things|Cool Things]]
