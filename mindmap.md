@@ -1,6 +1,6 @@
 # Site Map
 
-## Root /
+## Root
 
 - Journals
 - Cool Things
@@ -46,7 +46,3 @@
 - Sans-serif
 - Serif
 - Sweep Your Mind
-
-## Unsorted
-
-- Dominican Facts
