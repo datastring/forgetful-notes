@@ -1,4 +1,4 @@
-![SVG Banners](https://svg-banners.vercel.app/api?type=typeWriter&text1=🌴Forgetful%20Notes%20🥥&width=800&height=400)
+![SVG Banners](https://svg-banners.vercel.app/api?type=typeWriter&text1=🌴%20Forgetful%20Notes%20🥥&width=800&height=400)
 
 ![last-commit](https://img.shields.io/github/last-commit/datastring/forgetful-notes?style=for-the-badge)
 ![deployment](https://img.shields.io/github/deployments/datastring/forgetful-notes/github-pages?style=for-the-badge)
