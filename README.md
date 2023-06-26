@@ -9,7 +9,9 @@ Forgetful Notes is a Digital Garden based on [Amethyst](https://github.com/64bit
 
 ---
 
+<p>
 <img width=200px src="https://img.shields.io/github/last-commit/datastring/forgetful-notes?style=for-the-badge" />
 <img width=200px src="https://img.shields.io/github/deployments/datastring/forgetful-notes/github-pages?style=for-the-badge" />
 <img width=200px src="https://img.shields.io/github/repo-size/datastring/forgetful-notes?style=for-the-badge" />
 <img width=200px src="https://img.shields.io/tokei/lines/github/datastring/forgetful-notes?style=for-the-badge" />
+</p>
