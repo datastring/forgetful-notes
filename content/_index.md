@@ -14,41 +14,12 @@ Gardens are _explorable_ rather than structured as a strictly linear stream of p
 
 Here's a few links to help you navigate the garden.
 
-{{< columns >}}
-
-### Pages
+### Loose Pages
 
 - [[journals/_index|Journals]]
 - [[Tasks]]
 - [[Today I Learned]]
-- [[references/grammar|Grammar]]
-- [[notes/MPV Player|MPV Player]]
-- [[references/Python|Python]]
-- [[notes/Sans-serif|Sans-serif]]
-- [[notes/Serif|Serif]]
-- [[references/Skullcandy Crusher ANC|Skullcandy Crusher ANC]]
 - [[changelog|Changelog]]
-
-### Cool
-- [Typography](https://forgetful.dev/typography.html) – Flying Letters Style Showcase
-- [Nullboard](https://forgetful.dev/nullboard.html) – Minimalist Kanban board
-
-<--->
-### Lists
-
-- [[lists/bookmarklets|Bookmarklets]]
-- [[cool things|Cool Things]]
-- [[lists/Inspiration|Inspiration]]
-- [[lists/link collection|Link Collection]]
-- [[lists/newsletters collection|Newsletters Collection]]
-- [[lists/podcast collection|Podcast Collection]]
-- [[lists/quotes collection|Quotes Collection]]
-- [[snippets|Snippets]]
-- [[lists/tools collection|Tools Collection]]
-- [[lists/Wishlist|Wishlist]]
-- [[lists/words collection|Words Collection]]
-
-{{</columns>}}
 
 >[!info] About the Website
 >
