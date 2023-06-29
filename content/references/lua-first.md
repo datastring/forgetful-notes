@@ -1,11 +1,6 @@
 ---
-title: Lua first
+title: Lua - First Love2D Game
 ---
-
-source: http://www.osmstudios.com/tutorials/your-first-love2d-game-in-200-lines-part-1-of-3
-source: http://www.osmstudios.com/page/your-first-love2d-game-in-200-lines-part-2-of-3
-source: http://www.osmstudios.com/page/your-first-love2d-game-in-200-lines-part-3-of-3
-source: http://www.osmstudios.com/tutorials/your-first-love2d-game-in-200-lines-exercises
 
 ## 1. Getting Setup
 
