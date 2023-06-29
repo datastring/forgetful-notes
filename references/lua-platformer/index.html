@@ -1,0 +1,588 @@
+<!doctype html><html lang=en dir=ltr><head><meta property="og:title" content="Lua - Platformer"><meta property="og:description" content="Part 1 # If you&rsquo;re new to programming, I highly suggest checking out my first tutorial Your First Love2d Game in 200 Lines. This tutorial will assume some programming knowledge. We&rsquo;ll start with moving that knowledge to game development in Love2d.
+In part 1 we&rsquo;re going to make a small proof of concept. We&rsquo;ll build a little platformer with a player who can interact with platforms, move, and jump. In part 2 we&rsquo;ll abstract out that code and prepare to make our little protagonist into the big protagonist of a real game."><meta property="og:type" content="article"><meta property="og:url" content="https://forgetful.dev/references/lua-platformer/"><meta property="article:section" content="references"><meta property="article:modified_time" content="2023-06-29T09:47:46-05:00"><meta property="og:site_name" content="🌴Forgetful Notes🥥"><title>Lua - Platformer | 🌴Forgetful Notes🥥</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.41f621b3a90fcd707c5f4a37817ee3881c4c749598dad60d598d079dd00da360.css integrity="sha256-QfYhs6kPzXB8X0o3gX7jiBxMdJWY2tYNWY0HndANo2A=" crossorigin=anonymous><meta charset=utf-8><meta name=description content="Part 1 # If you&rsquo;re new to programming, I highly suggest checking out my first tutorial Your First Love2d Game in 200 Lines. This tutorial will assume some programming knowledge. We&rsquo;ll start with moving that knowledge to game development in Love2d.
+In part 1 we&rsquo;re going to make a small proof of concept. We&rsquo;ll build a little platformer with a player who can interact with platforms, move, and jump. In part 2 we&rsquo;ll abstract out that code and prepare to make our little protagonist into the big protagonist of a real game."><title>Lua - Platformer</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://forgetful.dev//favicon.png><link href=https://forgetful.dev/styles.e08ceb33360cec132feb69cfb982e2a4.min.css rel=stylesheet><link href=https://forgetful.dev/quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><link rel=preload href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css as=style onload='this.onload=null,this.rel="stylesheet"' integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://forgetful.dev/quartz/js/darkmode.516704e1ec78d98a9dccc223874bba86.min.js></script>
+<script src=https://forgetful.dev/quartz/js/util.c69e233dc1cc331a30b0f670e657b425.min.js></script>
+<script async src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script async src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://forgetful.dev/quartz/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js></script>
+<script defer src=https://forgetful.dev/quartz/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js></script>
+<script defer src=https://forgetful.dev/quartz/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js></script>
+<script defer src=https://forgetful.dev/quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://forgetful.dev/",fetchData=Promise.all([fetch("https://forgetful.dev/indices/linkIndex.0e8a7db903cbb8b5e922708d9714b186.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://forgetful.dev/indices/contentIndex.1c638343b518e1510153ec1a45a89ed9.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addCollapsibleCallouts(),initPopover("https://forgetful.dev",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://forgetful.dev",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{"’":"'"},throwOnError:!1})}</script><script>window.Million={navigate:e=>window.location.href=e,prefetch:()=>{}},window.addEventListener("DOMContentLoaded",()=>{init(),render()})</script></head><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://forgetful.dev/quartz/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js></script><header class=book-header><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h1 id=page-title><a href=https://forgetful.dev/>🌴Forgetful Notes🥥</a></h1><div class=spacer></div><div id=search-icon class=quartz-search><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control><main class=flex><aside class=book-menu><div class=book-menu-content><nav><div class=menu-search><div id=search-icon class=quartz-search><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div></div><ul><li><input type=checkbox id=section-fe6fe8edae024729a4d37026612df035 class=toggle>
+<label for=section-fe6fe8edae024729a4d37026612df035 class="flex justify-between"><a role=button class=book-collapse-toggle>Learning</a></label><ul><li><a href=/learning/Guitar/>Guitar</a></li><li><a href=/learning/meditation/>Meditate</a></li><li><a href=/learning/poetry/>Poetry</a></li><li><a href=/learning/Story-Structure/>Story Structure</a></li></ul></li><li><input type=checkbox id=section-9cd2a08bbeca3253276f8479c1c89e2b class=toggle>
+<label for=section-9cd2a08bbeca3253276f8479c1c89e2b class="flex justify-between"><a role=button class=book-collapse-toggle>Lists</a></label><ul><li><a href=/lists/bookmarklets/>Bookmarklets</a></li><li><a href=/lists/life-lessons/>Life Lessons</a></li><li><a href=/lists/Link-Collection/>Links Collection</a></li><li><a href=/lists/Newsletters-Collection/>Newsletters I Read</a></li><li><a href=/lists/podcast-collection/>Podcasts I Listen To</a></li><li><a href=/lists/Procrastination/>Procrastination Avoidal Tactics</a></li><li><a href=/lists/Quotes-Collection/>Quotes I Like</a></li><li><a href=/lists/Tools-Collection/>Tools I Use</a></li><li><a href=/lists/inspiration/>What Inspires Me</a></li><li><a href=/lists/wishlist/>Wishlist</a></li><li><a href=/lists/Words-Collection/>Words I Like</a></li></ul></li><li><input type=checkbox id=section-28ff6f6608134377659fe9e8042acbb9 class=toggle checked>
+<label for=section-28ff6f6608134377659fe9e8042acbb9 class="flex justify-between"><a role=button class=book-collapse-toggle>References</a></label><ul><li><a href=/references/Grammar/>Grammar</a></li><li><a href=/references/lua-first/>Lua - First Love2D Game</a></li><li><a href=/references/lua-platformer/ class=active>Lua - Platformer</a></li><li><a href=/references/python/>Python</a></li><li><a href=/references/Skullcandy-Crusher-ANC/>Skullcandy Crusher ANC</a></li></ul></li><li><a href=/journals/>Journals</a><ul></ul></li><li><a href=/cool-things/>Cool Things</a></li><li><a href=/snippets/>Snippets</a></li><li><a href=/Today-I-Learned/>Today I Learned</a></li><li><a href=/changelog/>Changelog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class="book-page container"><article class=markdown><h1 class=title>Lua - Platformer</h1><h2 id=part-1>Part 1
+<a class=anchor href=#part-1>#</a></h2><p>If you&rsquo;re new to programming, I highly suggest checking out my first tutorial
+<a href=http://osmstudios.com/tutorials/your-first-love2d-game-in-200-lines-part-1-of-3 rel=noopener>Your First Love2d Game in 200 Lines</a>. This tutorial will assume some programming knowledge. We&rsquo;ll start with moving that knowledge to game development in
+<a href=https://love2d.org/ rel=noopener>Love2d</a>.</p><p>In part 1 we&rsquo;re going to make a small proof of concept. We&rsquo;ll build a little platformer with a player who can interact with platforms, move, and jump. In part 2 we&rsquo;ll abstract out that code and prepare to make our little protagonist into the big protagonist of a real game. We&rsquo;ll have plenty of time to talk about gamestates, building levels, animation, and more once our super simple platformer is done.</p><p>Let&rsquo;s start by making our basic Love engine functions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>load</span>()
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>keypressed</span>(key)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> key <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;escape&#34;</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    love.event.push(<span style=color:#e6db74>&#34;quit&#34;</span>)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>draw</span>(dt)
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>One of the first things I do when starting a new Love project is to add that love.keypressed function that listens for &ldquo;escape.&rdquo; I don&rsquo;t have time to be exiting out in other ways. When our game is done we&rsquo;ll change that to be a pause button.</p><p>Next, let&rsquo;s think about our minimal platformer game. What is the least amount of work we can do to get a working demo? We call this the minimal viable product in the more professional development industry. You might be thinking, &ldquo;well we need bosses and levels and score keeping and bad guys.&rdquo; Think simpler! A platformer needs a player character and platforms. That&rsquo;s it. Everything else, bosses and enemies, is just an expansion of that. We&rsquo;ll make a plan for dealing with all of that in the next part.</p><p>Let&rsquo;s go ahead and define a stub player above those functions.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Setup a player object to hold an image and attach a collision object</span>
+</span></span><span style=display:flex><span>player <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  x <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  y <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Here are some incidental storage areas</span>
+</span></span><span style=display:flex><span>  img <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span> <span style=color:#75715e>-- store the sprite we&#39;ll be drawing</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>So far, we&rsquo;ve given the player a location, but we know from playing platformers that there are certain ways the player character interacts with the world. The player should be able to move backwards and forwards. Unlike my side-scrolling tutorial, the player doesn&rsquo;t move in set intervals. The player character needs to accelerate in a direction up to a given maximum and slow-down when the player stops giving the command. In other words, the player needs a velocity and friction with the ground. Let&rsquo;s store these values. Replace the player code block with:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  x <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  y <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- The first set of values are for our rudimentary physics system</span>
+</span></span><span style=display:flex><span>  xVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, <span style=color:#75715e>-- current velocity on x, y axes</span>
+</span></span><span style=display:flex><span>  yVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  acc <span style=color:#f92672>=</span> <span style=color:#ae81ff>100</span>, <span style=color:#75715e>-- the acceleration of our player</span>
+</span></span><span style=display:flex><span>  maxSpeed <span style=color:#f92672>=</span> <span style=color:#ae81ff>600</span>, <span style=color:#75715e>-- the top speed</span>
+</span></span><span style=display:flex><span>  friction <span style=color:#f92672>=</span> <span style=color:#ae81ff>20</span>, <span style=color:#75715e>-- slow our player down - we could toggle this situationally to create icy or slick platforms</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Here are some incidental storage areas</span>
+</span></span><span style=display:flex><span>  img <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span> <span style=color:#75715e>-- store the sprite we&#39;ll be drawing</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>We&rsquo;ll also need to jump. This is a more complex version of above. We&rsquo;ll set a jump acceleration as well as some maximums on how our character jumps. Finally, if we&rsquo;re jumping, we&rsquo;ll need gravity.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- The finished player object</span>
+</span></span><span style=display:flex><span>player <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  x <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  y <span style=color:#f92672>=</span> <span style=color:#ae81ff>16</span>,
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- The first set of values are for our rudimentary physics system</span>
+</span></span><span style=display:flex><span>  xVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, <span style=color:#75715e>-- current velocity on x, y axes</span>
+</span></span><span style=display:flex><span>  yVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>,
+</span></span><span style=display:flex><span>  acc <span style=color:#f92672>=</span> <span style=color:#ae81ff>100</span>, <span style=color:#75715e>-- the acceleration of our player</span>
+</span></span><span style=display:flex><span>  maxSpeed <span style=color:#f92672>=</span> <span style=color:#ae81ff>600</span>, <span style=color:#75715e>-- the top speed</span>
+</span></span><span style=display:flex><span>  friction <span style=color:#f92672>=</span> <span style=color:#ae81ff>20</span>, <span style=color:#75715e>-- slow our player down - we could toggle this situationally to create icy or slick platforms</span>
+</span></span><span style=display:flex><span>  gravity <span style=color:#f92672>=</span> <span style=color:#ae81ff>80</span>, <span style=color:#75715e>-- we will accelerate towards the bottom</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- These are values applying specifically to jumping</span>
+</span></span><span style=display:flex><span>  isJumping <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>, <span style=color:#75715e>-- are we in the process of jumping?</span>
+</span></span><span style=display:flex><span>  isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>, <span style=color:#75715e>-- are we on the ground?</span>
+</span></span><span style=display:flex><span>  hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>, <span style=color:#75715e>-- is this as high as we can go?</span>
+</span></span><span style=display:flex><span>  jumpAcc <span style=color:#f92672>=</span> <span style=color:#ae81ff>500</span>, <span style=color:#75715e>-- how fast do we accelerate towards the top</span>
+</span></span><span style=display:flex><span>  jumpMaxSpeed <span style=color:#f92672>=</span> <span style=color:#ae81ff>9.5</span>, <span style=color:#75715e>-- our speed limit while jumping</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Here are some incidental storage areas</span>
+</span></span><span style=display:flex><span>  img <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span> <span style=color:#75715e>-- store the sprite we&#39;ll be drawing</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Go ahead and finish our player out by adding…</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.img <span style=color:#f92672>=</span> love.graphics.newImage(<span style=color:#e6db74>&#39;assets/character_block.png&#39;</span>)
+</span></span></code></pre></div><p>…to the <code>love.load</code> function and…</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>love.graphics.draw(player.img, player.x, player.y)
+</span></span></code></pre></div><p>…to <code>love.draw</code>.</p><p>If everything went as planned you should see a little rectangle on a black screen when you run the application.</p><p>The Player Character has a lot of variables to take in, but they&rsquo;ll make more sense as we use them. First, let&rsquo;s go ahead and write in our movement system. It&rsquo;s quite a bit more complex than the code in our scrollling shooter. We&rsquo;re rolling in some very rudimentary physics. The player will have a velocity and be acted on by gravity and friction.</p><p>Replace <code>love.update</code> with this code block:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  player.x <span style=color:#f92672>=</span> player.x <span style=color:#f92672>+</span> player.xVelocity
+</span></span><span style=display:flex><span>  player.y <span style=color:#f92672>=</span> player.y <span style=color:#f92672>+</span> player.yVelocity
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Apply Friction</span>
+</span></span><span style=display:flex><span>  player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> player.friction, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>  player.yVelocity <span style=color:#f92672>=</span> player.yVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> player.friction, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Apply gravity</span>
+</span></span><span style=display:flex><span>  player.yVelocity <span style=color:#f92672>=</span> player.yVelocity <span style=color:#f92672>+</span> player.gravity <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;left&#34;</span>, <span style=color:#e6db74>&#34;a&#34;</span>) <span style=color:#f92672>and</span> player.xVelocity <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>player.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>-</span> player.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>elseif</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;right&#34;</span>, <span style=color:#e6db74>&#34;d&#34;</span>) <span style=color:#f92672>and</span> player.xVelocity <span style=color:#f92672>&lt;</span> player.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>+</span> player.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- The Jump code gets a lttle bit crazy.  Bare with me.</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;up&#34;</span>, <span style=color:#e6db74>&#34;w&#34;</span>) <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>-</span>player.yVelocity <span style=color:#f92672>&lt;</span> player.jumpMaxSpeed <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> player.hasReachedMax <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      player.yVelocity <span style=color:#f92672>=</span> player.yVelocity <span style=color:#f92672>-</span> player.jumpAcc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elseif</span> math.abs(player.yVelocity) <span style=color:#f92672>&gt;</span> player.jumpMaxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      player.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    player.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span> <span style=color:#75715e>-- we are no longer in contact with the ground</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Let&rsquo;s walk through the code. There is a lot to see here so brace yourself. First, we move the player x, y position to their old position plus their velocity on the given axis.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.x <span style=color:#f92672>=</span> player.x <span style=color:#f92672>+</span> player.xVelocity
+</span></span><span style=display:flex><span>player.y <span style=color:#f92672>=</span> player.y <span style=color:#f92672>+</span> player.yVelocity
+</span></span></code></pre></div><p>It&rsquo;s odd that we&rsquo;re doing this first. Normally we&rsquo;d process the input first then add the velocity results. However, when we write the code for collision handling we&rsquo;ll want collisions handled immediately to avoid shudders.</p><p>Next we add a small amount of deceleration and call it friction.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> player.friction, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>player.yVelocity <span style=color:#f92672>=</span> player.yVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> player.friction, <span style=color:#ae81ff>1</span>))
+</span></span></code></pre></div><p><code>friction</code> was set in our player variables. All we are doing here is multiplying the current velocity by a number between 0 and 1. <code>math.min</code> just chooses the smaller of <code>dt * player.friction</code> and <code>1</code>. In the real-world the y axis doesn&rsquo;t have a whole lot of friction, but it ends up feeling better than turning the gravity down.</p><p>Gravity is just a constant downward acceleration. It will work the same way as our left / right movement code which looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>if</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;left&#34;</span>, <span style=color:#e6db74>&#34;a&#34;</span>) <span style=color:#f92672>and</span> player.xVelocity <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>player.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>  player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>-</span> player.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;right&#34;</span>, <span style=color:#e6db74>&#34;d&#34;</span>) <span style=color:#f92672>and</span> player.xVelocity <span style=color:#f92672>&lt;</span> player.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>  player.xVelocity <span style=color:#f92672>=</span> player.xVelocity <span style=color:#f92672>+</span> player.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Pay attention to the signs here. For left we subtract and for right we add.</p><p>One of the fundamental elements of a platformer game is the player characters ability to interact with platforms. Obviously.</p><p>We have a few options here. We could use Love2d&rsquo;s built in Box2D physics engine. We could use a very simple rectangular collision check function like we did in the side scrolling tutorial. Or we could find a library mid-way inbetween.</p><p>Box2D feels like overkill. We don&rsquo;t need realistic physics. We need &ldquo;game-y&rdquo; physics. And a simple function isn&rsquo;t going to do enough when we have many collisions happening at once.</p><p>Instead, let&rsquo;s load up a library called
+<a href=https://github.com/kikito/bump.lua rel=noopener>bump.lua</a>. You&rsquo;ll want to download the entire project then unzip it into <code>/libs</code>. It should look like this:</p><p>[Image Placeholder]</p><p>We include the library by adding <code>bump = require 'libs.bump.bump'</code> to the very top of the file. Next, we&rsquo;ll stub out a world and a couple of ground objects just below the require. The top of our file should now look like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>world <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span> <span style=color:#75715e>-- storage place for bump</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>ground_0 <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>ground_1 <span style=color:#f92672>=</span> {}
+</span></span></code></pre></div><p>In bump our collidables are stored in a &ldquo;world&rdquo; which we create in our load event. Objects that have collisions are then inserted into the world. When we want to move an object we move it relative to the world we created so that bump can process our collisions for us.</p><p>We declare this world right at the top of <code>love.load</code>. Our tiles will be 16 pixels wide and tall so we pass that into bump.newWorld which defaults to 64. After we load in our player object we&rsquo;ll add objects to our world so that our final love.load looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>load</span>()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Setup bump</span>
+</span></span><span style=display:flex><span>  world <span style=color:#f92672>=</span> bump.newWorld(<span style=color:#ae81ff>16</span>)  <span style=color:#75715e>-- 16 is our tile size</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Create our player.</span>
+</span></span><span style=display:flex><span>  player.img <span style=color:#f92672>=</span> love.graphics.newImage(<span style=color:#e6db74>&#39;assets/character_block.png&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  world:add(player, player.x, player.y, player.img:getWidth(), player.img:getHeight())
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Draw a level</span>
+</span></span><span style=display:flex><span>  world:add(ground_0, <span style=color:#ae81ff>120</span>, <span style=color:#ae81ff>360</span>, <span style=color:#ae81ff>640</span>, <span style=color:#ae81ff>16</span>)
+</span></span><span style=display:flex><span>  world:add(ground_1, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>448</span>, <span style=color:#ae81ff>640</span>, <span style=color:#ae81ff>32</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Let&rsquo;s add our ground to love.draw so we can see it. Our final love.draw function will look like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>draw</span>(dt)
+</span></span><span style=display:flex><span>  love.graphics.draw(player.img, player.x, player.y)
+</span></span><span style=display:flex><span>  love.graphics.rectangle(<span style=color:#e6db74>&#39;fill&#39;</span>, world:getRect(ground_0))
+</span></span><span style=display:flex><span>  love.graphics.rectangle(<span style=color:#e6db74>&#39;fill&#39;</span>, world:getRect(ground_1))
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>We only need a couple more lines to start processing collisions. Our process will be to calculate where we want to go, a goalX and goalY, then attempt to move there. bump.lua will process our collisions and return the actual x and y of what was moved.</p><p>Let&rsquo;s change…</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.x <span style=color:#f92672>=</span> player.x <span style=color:#f92672>+</span> player.xVelocity
+</span></span><span style=display:flex><span>player.y <span style=color:#f92672>=</span> player.y <span style=color:#f92672>+</span> player.yVelocity
+</span></span></code></pre></div><p>… to …</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>local</span> goalX <span style=color:#f92672>=</span> player.x <span style=color:#f92672>+</span> player.xVelocity
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> goalY <span style=color:#f92672>=</span> player.y <span style=color:#f92672>+</span> player.yVelocity
+</span></span></code></pre></div><p>Then add our movement to the player object. <code>world:move</code> returns the actual x and y coordinates after stopping our moving objects and a list of collisions that occurred.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.x, player.y, collisions <span style=color:#f92672>=</span> world:move(player, goalX, goalY)
+</span></span></code></pre></div><p>If we run the code now we&rsquo;ll see our little player character fall from the sky and stop when it hits the white platform. It should look a little like this:</p><p>[image placeholder]</p><p>This is actually complete and ready to go, but we will eventually need some collision filtering. For instance, we want our character to pass through the bottom of platforms but get stopped by landing on them. So we&rsquo;ll add a filter that looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>player.filter <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(item, other)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> x, y, w, h <span style=color:#f92672>=</span> world:getRect(other)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> px, py, pw, ph <span style=color:#f92672>=</span> world:getRect(item)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> playerBottom <span style=color:#f92672>=</span> py <span style=color:#f92672>+</span> ph
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> otherBottom <span style=color:#f92672>=</span> y <span style=color:#f92672>+</span> h
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> playerBottom <span style=color:#f92672>&lt;=</span> y <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;slide&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>This function takes the item colliding, the player in this case, and what it is colliding with. From there we use a bump.lua world function <code>world:getRect(item)</code> to return the coordinates of the object at the time of collision. If the bottom of our player is above (less than) the top of the platform we are colliding with the platform from above. We return &lsquo;slide&rsquo; as the type of collision we&rsquo;d like to see. You can read about collision types in
+<a href=https://github.com/kikito/bump.lua#collision-resolution rel=noopener>bump.lua here</a>. If we aren&rsquo;t above the platform we return an implicit nil value that means no collision is being processed.</p><p>Next we run our <code>world:move</code> passing in player.filter as our last argument. <code>player.x, player.y, collisions, len = world:move(player, goalX, goalY, player.filter)</code></p><p>Finally, we&rsquo;ll loop through the returned collisions and react appropriately:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>for</span> i, coll <span style=color:#66d9ef>in</span> ipairs(collisions) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> coll.touch.y <span style=color:#f92672>&gt;</span> goalY <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    player.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    player.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>elseif</span> coll.normal.y <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    player.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    player.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>All we&rsquo;re doing is allowing the player to jump again once the character touches the ground.</p><p>That&rsquo;s all there is for this bit. By now <code>main.lua</code> is looking a little cluttered. In part two we&rsquo;ll do some behind the scenes plumbing to make our game development quicker and cleaner.</p><h2 id=part-2>Part 2
+<a class=anchor href=#part-2>#</a></h2><p>The second part of this tutorial is going to be pretty heavy on general programming and a bit light on game making. If you&rsquo;re pretty familiar with OOP principles you&rsquo;ll probably just want to skim this tutorial and move onto part three.</p><p>This tutorial will seem a bit obtuse, but it&rsquo;s worth it to know. We&rsquo;re going to take what we did in the previous tutorial, add a few libraries, and split our code into several files.</p><p>Let&rsquo;s start by grabbing the libraries we need. I like to use git submodules to manage my dependencies, but downloading the source and adding it to your project manually will also work. We&rsquo;re going to use vlrd&rsquo;s fantastic
+<a href=https://github.com/vrld/hump rel=noopener>HUMP</a> library for classes and gamestates. We&rsquo;ll eventually use it for our camera as well. We&rsquo;ll use
+<a href=https://github.com/kikito/bump.lua rel=noopener>bump.lua</a> again for our collisions.</p><p>If you&rsquo;re doing things manually, go to the links above, download the files and unzip them into the libs directory. If you&rsquo;re using git for managing things:</p><pre tabindex=0><code>git init #if you haven&#39;t already.
+git submodule add git@github.com:vrld/hump libs/hump
+git submodule add git@github.com:kikito/bump.lua libs/bump
+</code></pre><p>The new structure of our game will have a simple main.lua that sets up our gamestates, an entities folder that contains every object in the game that is drawn or updated, and a gamestate folder that contains our menus, levels, etc. It will look something like this:</p><pre tabindex=0><code>root
+- entities
+- gamestates
+- libs
+ - hump
+ - bump
+</code></pre><p>Let&rsquo;s talk about Object Oriented Programming &ndash; OOP for short. It&rsquo;s a programming paradigm that says code should be based around objects and data rather than actions. So far we&rsquo;ve been discussing our game in terms of action. We have a load action, draw action, update action. Now we&rsquo;re going to transition to think of our game in terms of <em>what</em> is performing an action. So from now on we can say, &ldquo;player draws x&rdquo; and &ldquo;enemy draws x&rdquo; instead of &ldquo;draw x and y.&rdquo;</p><p>Objects also give us the ability to share traits in what programming textbooks call inheritance and polymorphism. The idea is that the more code you can reuse the less code you need to write. So rather than defining a dog and a cat, you can first define a mammal and have dog and cat <em>inherit</em> from mammal. We can also inherit from multiple sources. So we could have a bit of code describing traits of a house pet that we can bring in.</p><p>Now for the catch, Lua is not an object oriented language. However, we can expand Lua with the features we need. The HUMP library adds a class system &ndash; roughly speaking.</p><p>Create a file in the entities folder called &ldquo;Entity.lua&rdquo; and add the following code:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Represents a single drawable object</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Class <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.class&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entity <span style=color:#f92672>=</span> Class{}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entity</span>:<span style=color:#a6e22e>init</span>(world, x, y, w, h)
+</span></span><span style=display:flex><span>  self.world <span style=color:#f92672>=</span> world
+</span></span><span style=display:flex><span>  self.x <span style=color:#f92672>=</span> x
+</span></span><span style=display:flex><span>  self.y <span style=color:#f92672>=</span> y
+</span></span><span style=display:flex><span>  self.w <span style=color:#f92672>=</span> w
+</span></span><span style=display:flex><span>  self.h <span style=color:#f92672>=</span> h
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entity</span>:<span style=color:#a6e22e>getRect</span>()
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> self.x, self.y, self.w, self.h
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entity</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Do nothing by default, but we still have to have something to call</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entity</span>:<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Do nothing by default, but we still have to have something to call</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> Entity
+</span></span></code></pre></div><p>That&rsquo;s the complete code for Entity.lua for now. We pull in Class from the HUMP library and use that to create Entity. Everything in our game is going to be an entity - from the ground to the background to our player character. If it can be drawn on the screen or needs to update per frame, it&rsquo;s an entity. Most of these objects only share a few properties - the world they inhabit for physics (potentially nil), an x and y coordinate, and a width and height. As the game expands we&rsquo;ll make note of other variables all Entities need and move the values into this file.</p><p>Next we have a simple <code>getRect</code> function. This is just a time saver for down the road. We&rsquo;ll need the shape and size of the object for use in our collision detector and this lets us fire it all back at once. It&rsquo;s just for convenience.</p><p>Finally, we have empty functions from draw and update. Each Entity will have both of these called from the gamestate they&rsquo;re a part of. Even if the functions do nothing, ground for instance does not have an update, it still needs a placeholder to avoid errors.</p><p>Let&rsquo;s use our new entity system to create our first entity. We&rsquo;ll start simple. Create a new file in the entities folder named ground.lua. The code is almost exactly the same as in Part 1 but we&rsquo;ve abstracted a layer away.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>local</span> Class <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.class&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entity <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.Entity&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Ground <span style=color:#f92672>=</span> Class{
+</span></span><span style=display:flex><span>  __includes <span style=color:#f92672>=</span> Entity <span style=color:#75715e>-- Ground class inherits our Entity class</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Ground</span>:<span style=color:#a6e22e>init</span>(world, x, y, w, h)
+</span></span><span style=display:flex><span>  Entity.init(self, world, x, y, w, h)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  self.world:add(self, self:getRect())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Ground</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  love.graphics.rectangle(<span style=color:#e6db74>&#39;fill&#39;</span>, self:getRect())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> Ground
+</span></span></code></pre></div><p>We&rsquo;ll do exactly the same thing for the player. Create a new file called player.lua in the entities folder.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>local</span> Class <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.class&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entity <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.Entity&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> player <span style=color:#f92672>=</span> Class{
+</span></span><span style=display:flex><span>  __includes <span style=color:#f92672>=</span> Entity <span style=color:#75715e>-- Player class inherits our Entity class</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>player</span>:<span style=color:#a6e22e>init</span>(world, x, y)
+</span></span><span style=display:flex><span>  self.img <span style=color:#f92672>=</span> love.graphics.newImage(<span style=color:#e6db74>&#39;/assets/character_block.png&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  Entity.init(self, world, x, y, self.img:getWidth(), self.img:getHeight())
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Add our unique player values</span>
+</span></span><span style=display:flex><span>  self.xVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#75715e>-- current velocity on x, y axes</span>
+</span></span><span style=display:flex><span>  self.yVelocity <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>  self.acc <span style=color:#f92672>=</span> <span style=color:#ae81ff>100</span> <span style=color:#75715e>-- the acceleration of our player</span>
+</span></span><span style=display:flex><span>  self.maxSpeed <span style=color:#f92672>=</span> <span style=color:#ae81ff>600</span> <span style=color:#75715e>-- the top speed</span>
+</span></span><span style=display:flex><span>  self.friction <span style=color:#f92672>=</span> <span style=color:#ae81ff>20</span> <span style=color:#75715e>-- slow our player down - we could toggle this situationally to create icy or slick platforms</span>
+</span></span><span style=display:flex><span>  self.gravity <span style=color:#f92672>=</span> <span style=color:#ae81ff>80</span> <span style=color:#75715e>-- we will accelerate towards the bottom</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>-- These are values applying specifically to jumping</span>
+</span></span><span style=display:flex><span>  self.isJumping <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span> <span style=color:#75715e>-- are we in the process of jumping?</span>
+</span></span><span style=display:flex><span>  self.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span> <span style=color:#75715e>-- are we on the ground?</span>
+</span></span><span style=display:flex><span>  self.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>  <span style=color:#75715e>-- is this as high as we can go?</span>
+</span></span><span style=display:flex><span>  self.jumpAcc <span style=color:#f92672>=</span> <span style=color:#ae81ff>500</span> <span style=color:#75715e>-- how fast do we accelerate towards the top</span>
+</span></span><span style=display:flex><span>  self.jumpMaxSpeed <span style=color:#f92672>=</span> <span style=color:#ae81ff>11</span> <span style=color:#75715e>-- our speed limit while jumping</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  self.world:add(self, self:getRect())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>player</span>:<span style=color:#a6e22e>collisionFilter</span>(other)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> x, y, w, h <span style=color:#f92672>=</span> self.world:getRect(other)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> playerBottom <span style=color:#f92672>=</span> self.y <span style=color:#f92672>+</span> self.h
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> otherBottom <span style=color:#f92672>=</span> y <span style=color:#f92672>+</span> h
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> playerBottom <span style=color:#f92672>&lt;=</span> y <span style=color:#66d9ef>then</span> <span style=color:#75715e>-- bottom of player collides with top of platform.</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;slide&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>player</span>:<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> prevX, prevY <span style=color:#f92672>=</span> self.x, self.y
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Apply Friction</span>
+</span></span><span style=display:flex><span>  self.xVelocity <span style=color:#f92672>=</span> self.xVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> self.friction, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>  self.yVelocity <span style=color:#f92672>=</span> self.yVelocity <span style=color:#f92672>*</span> (<span style=color:#ae81ff>1</span> <span style=color:#f92672>-</span> math.min(dt <span style=color:#f92672>*</span> self.friction, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Apply gravity</span>
+</span></span><span style=display:flex><span>  self.yVelocity <span style=color:#f92672>=</span> self.yVelocity <span style=color:#f92672>+</span> self.gravity <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;left&#34;</span>, <span style=color:#e6db74>&#34;a&#34;</span>) <span style=color:#f92672>and</span> self.xVelocity <span style=color:#f92672>&gt;</span> <span style=color:#f92672>-</span>self.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		self.xVelocity <span style=color:#f92672>=</span> self.xVelocity <span style=color:#f92672>-</span> self.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>elseif</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;right&#34;</span>, <span style=color:#e6db74>&#34;d&#34;</span>) <span style=color:#f92672>and</span> self.xVelocity <span style=color:#f92672>&lt;</span> self.maxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		self.xVelocity <span style=color:#f92672>=</span> self.xVelocity <span style=color:#f92672>+</span> self.acc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- The Jump code gets a lttle bit crazy.  Bare with me.</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> love.keyboard.isDown(<span style=color:#e6db74>&#34;up&#34;</span>, <span style=color:#e6db74>&#34;w&#34;</span>) <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>-</span>self.yVelocity <span style=color:#f92672>&lt;</span> self.jumpMaxSpeed <span style=color:#f92672>and</span> <span style=color:#f92672>not</span> self.hasReachedMax <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      self.yVelocity <span style=color:#f92672>=</span> self.yVelocity <span style=color:#f92672>-</span> self.jumpAcc <span style=color:#f92672>*</span> dt
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elseif</span> math.abs(self.yVelocity) <span style=color:#f92672>&gt;</span> self.jumpMaxSpeed <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      self.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    self.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span> <span style=color:#75715e>-- we are no longer in contact with the ground</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- these store the location the player will arrive at should</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> goalX <span style=color:#f92672>=</span> self.x <span style=color:#f92672>+</span> self.xVelocity
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> goalY <span style=color:#f92672>=</span> self.y <span style=color:#f92672>+</span> self.yVelocity
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Move the player while testing for collisions</span>
+</span></span><span style=display:flex><span>  self.x, self.y, collisions, len <span style=color:#f92672>=</span> self.world:move(self, goalX, goalY, self.collisionFilter)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Loop through those collisions to see if anything important is happening</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> i, coll <span style=color:#66d9ef>in</span> ipairs(collisions) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> coll.touch.y <span style=color:#f92672>&gt;</span> goalY <span style=color:#66d9ef>then</span>  <span style=color:#75715e>-- We touched below (remember that higher locations have lower y values) our intended target.</span>
+</span></span><span style=display:flex><span>      self.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span> <span style=color:#75715e>-- this scenario does not occur in this demo</span>
+</span></span><span style=display:flex><span>      self.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elseif</span> coll.normal.y <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      self.hasReachedMax <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>      self.isGrounded <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>player</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  love.graphics.draw(self.img, self.x, self.y)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> player
+</span></span></code></pre></div><p>Hopefully you&rsquo;re starting to see the advantage of this approach. If I need to make changes to the player I don&rsquo;t have to scroll through main.lua, I can just pop open player.lua and find what I need there. Big games become manageable. All we&rsquo;re missing now is the glue to hold it altogether.</p><p>For that we&rsquo;ll use Gamestate from the HUMP library. Each Gamestate is like a separate main.lua file. It has a load event, a draw event, and an update event. A Gamestate could represent a menu, a level, or a pause screen. We&rsquo;ll handle all three, but we&rsquo;ll build out the menu later.</p><p>The
+<a href=http://hump.readthedocs.io/en/latest/gamestate.html rel=noopener>Gamestate documentation</a> has a few examples of putting together your game with this pattern. Our main.lua is going to be heavily simplified in favor of moving code into the Gamestate objects. Here is the final code for main.lua.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Pull in Gamestate from the HUMP library</span>
+</span></span><span style=display:flex><span>Gamestate <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.gamestate&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Pull in each of our game states</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> mainMenu <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;gamestates.mainmenu&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> gameLevel1 <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;gamestates.gameLevel1&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> pause <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;gamestates.pause&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>load</span>()
+</span></span><span style=display:flex><span>  Gamestate.registerEvents()
+</span></span><span style=display:flex><span>  Gamestate.switch(gameLevel1)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>love</span>.<span style=color:#a6e22e>keypressed</span>(key)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> key <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;escape&#34;</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    love.event.push(<span style=color:#e6db74>&#34;quit&#34;</span>)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Quick breakdown: We load up the libraries we&rsquo;ll use, in this case just Gamestate from HUMP. Then we&rsquo;ll pull in three gamestate libraries. (We&rsquo;ll create these next.) Then we replace our <code>love.load()</code> function with two lines. You&rsquo;ll note that this file no longer has draw or update functions. Instead, you&rsquo;ll find those functions in the Gamestate files. What we do have is a <code>keypressed</code> function. This is just because I like to be able to get out of the game quickly while building. Eventually we&rsquo;ll tie this to a debug variable.</p><p>Before we build out our Gamestates we need to identify the code that will be common between them and we&rsquo;ll abstract that code out so that we don&rsquo;t repeat ourselves. Each Gamestate will be managing a list of entities and calling the individual draws and updates of those entities. I don&rsquo;t want to write those loops into each Gamestate so let&rsquo;s create a new file in our entities folder named &ndash; appropriately &ndash; Entities.lua.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Represents a collection of drawable entities.  Each gamestate holds one of these.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entities <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>  active <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>  world <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span>,
+</span></span><span style=display:flex><span>  entityList <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>enter</span>(world)
+</span></span><span style=display:flex><span>  self:clear()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  self.world <span style=color:#f92672>=</span> world
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>add</span>(entity)
+</span></span><span style=display:flex><span>  table.insert(self.entityList, entity)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>addMany</span>(entities)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> k, entity <span style=color:#66d9ef>in</span> pairs(entities) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    table.insert(self.entityList, entity)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>remove</span>(entity)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> i, e <span style=color:#66d9ef>in</span> ipairs(self.entityList) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> e <span style=color:#f92672>==</span> entity <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>      table.remove(self.entityList, i)
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>removeAt</span>(index)
+</span></span><span style=display:flex><span>  table.remove(self.entityList, index)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>clear</span>()
+</span></span><span style=display:flex><span>  self.world <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>  self.entityList <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> i, e <span style=color:#66d9ef>in</span> ipairs(self.entityList) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    e:draw(i)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>Entities</span>:<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> i, e <span style=color:#66d9ef>in</span> ipairs(self.entityList) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>    e:update(dt, i)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> Entities
+</span></span></code></pre></div><p>This file wraps entityList &ndash; an array of entities &ndash; and provides us with handy methods for manipulation.</p><p>With DRY (don&rsquo;t repeat yourself) principles followed let&rsquo;s create our gameLevel1 Gamestate. Create a folder in the root (if you haven&rsquo;t already) named <code>gamestates</code> and add a file called gameLevel1.lua. Obviously we&rsquo;re naming it like this because we plan on having many levels.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Import our libraries.</span>
+</span></span><span style=display:flex><span>bump <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.bump.bump&#39;</span>
+</span></span><span style=display:flex><span>Gamestate <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.gamestate&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Import our Entity system.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entities <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.Entities&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entity <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.Entity&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Create our Gamestate</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> gameLevel1 <span style=color:#f92672>=</span> Gamestate.new()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Import the Entities we build.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Player <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.player&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Ground <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.ground&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Declare a couple immportant variables</span>
+</span></span><span style=display:flex><span>player <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>world <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>enter</span>()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Game Levels do need collisions.</span>
+</span></span><span style=display:flex><span>  world <span style=color:#f92672>=</span> bump.newWorld(<span style=color:#ae81ff>16</span>) <span style=color:#75715e>-- Create a world for bump to function in.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Initialize our Entity System</span>
+</span></span><span style=display:flex><span>  Entities:enter()
+</span></span><span style=display:flex><span>  player <span style=color:#f92672>=</span> Player(world, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>16</span>)
+</span></span><span style=display:flex><span>  ground_0 <span style=color:#f92672>=</span> Ground(world, <span style=color:#ae81ff>120</span>, <span style=color:#ae81ff>360</span>, <span style=color:#ae81ff>640</span>, <span style=color:#ae81ff>16</span>)
+</span></span><span style=display:flex><span>  ground_1 <span style=color:#f92672>=</span> Ground(world, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>448</span>, <span style=color:#ae81ff>640</span>, <span style=color:#ae81ff>16</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Add instances of our entities to the Entity List</span>
+</span></span><span style=display:flex><span>  Entities:addMany({player, ground_0, ground_1})
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  Entities:update(dt) <span style=color:#75715e>-- this executes the update function for each individual Entity</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  Entities:draw() <span style=color:#75715e>-- this executes the draw function for each individual Entity</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> gameLevel1
+</span></span></code></pre></div><p>The code here is pretty self-explanatory. Setup our physics, add our entities, update, draw. You might also notice that it looks a lot like main.lua used to look. Each Gamestate is a different <em>main</em>, a different set of events.</p><p>I&rsquo;m also going to create a mainMenu.lua Gamestate, but I&rsquo;m leaving it blank for now. We&rsquo;ll fill it out in a future tutorial.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>local</span> mainMenu <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> mainMenu
+</span></span></code></pre></div><p>Finally, we&rsquo;ll create one more Gamestate for a bit of magic. This is lifted directly from the HUMP libraries documentation, but I&rsquo;ll try to explain it here as well. This is our &ldquo;pause&rdquo; Gamestate. The HUMP library creates a list of Gamestates that we can manipulate by pushing (inserting a state) and popping (removing a state at the end). This means that as we switch Gamestates, we can still take advantage of code in previous Gamestates. In this case, we have a level Gamestate that we still want to draw but we don&rsquo;t want to update while paused.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>pause <span style=color:#f92672>=</span> Gamestate.new()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>pause</span>:<span style=color:#a6e22e>enter</span>(from)
+</span></span><span style=display:flex><span>  self.from <span style=color:#f92672>=</span> from <span style=color:#75715e>-- record previous state</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>pause</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> w, h <span style=color:#f92672>=</span> love.graphics.getWidth(), love.graphics.getHeight()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- draw previous screen</span>
+</span></span><span style=display:flex><span>  self.from:draw()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- overlay with pause message</span>
+</span></span><span style=display:flex><span>  love.graphics.setColor(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>100</span>)
+</span></span><span style=display:flex><span>  love.graphics.rectangle(<span style=color:#e6db74>&#39;fill&#39;</span>, <span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>, w, h)
+</span></span><span style=display:flex><span>  love.graphics.setColor(<span style=color:#ae81ff>255</span>,<span style=color:#ae81ff>255</span>,<span style=color:#ae81ff>255</span>)
+</span></span><span style=display:flex><span>  love.graphics.printf(<span style=color:#e6db74>&#39;PAUSE&#39;</span>, <span style=color:#ae81ff>0</span>, h<span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>, w, <span style=color:#e6db74>&#39;center&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>pause</span>:<span style=color:#a6e22e>keypressed</span>(key)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> key <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;p&#39;</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> Gamestate.pop() <span style=color:#75715e>-- return to previous state</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> pause
+</span></span></code></pre></div><p>When we enter this Gamestate (you&rsquo;ll remember the code to enter this state is in our main.lua) we record the previous state in self.from. Later we call the draw function of our previous state then overlay a black film over it with the word &ldquo;PAUSE.&rdquo; We have no update function because nothing is moving, but we do need to catch the player unpausing so we have a keypressed event that looks for the letter &ldquo;p&rdquo; and returns us to the previous state.</p><p>That&rsquo;s it for Part 2. It&rsquo;s a bit painful since our finally product looks exactly the same as it did at the end of Part 1, but we&rsquo;ve layed a solid foundation for all the features a real platforming game needs.</p><p>In Part 3 we&rsquo;ll create and load levels in with
+<a href=http://www.mapeditor.org/ rel=noopener>Tiled</a>.</p><h2 id=part-3>Part 3
+<a class=anchor href=#part-3>#</a></h2><p>This tutorial should be more fun than the last one. With our framework in place we can get down to the business of making a game. In this section I&rsquo;ll teach you how to use
+<a href=http://www.mapeditor.org/ rel=noopener>Tiled</a> to create levels for Love games. We&rsquo;ll have to write a little bit of code to use them.</p><p><strong>Important:</strong> <em>In the process of making this tutorial I noticed some problems with the logic in part 2. We&rsquo;ll be correcting this, but not until Part 4. I considered going back and writing the code right the first time, but that would have left people already following this tutorial series in a lurch. I also thought it might be good to show you all how I debug code.</em></p><p>With that out of the way, let&rsquo;s make our first level! Here are our steps.</p><ol><li>Make the level using
+<a href=http://www.mapeditor.org/ rel=noopener>Tiled</a>.</li><li>Create a class layer to load the level.</li></ol><h2 id=1-make-the-level>1. Make the Level
+<a class=anchor href=#1-make-the-level>#</a></h2><p>For this tutorial, I have decided to use
+<a href=http://www.openpixelproject.com/ rel=noopener>Open Pixel Project</a> for our assets. It&rsquo;s a fantastic project with some really cool art and because they follow a set of rules, you can choose whichever set of tiles you want for your level. I&rsquo;m going to choose cave for my level.</p><p>You are free to choose any tileset you want, but be sure to move the tiles you&rsquo;ll be using to the <code>/assets/</code> folder of our project to avoid weird loading bugs.</p><p><a href=http://www.mapeditor.org/ rel=noopener>Tiled</a> is very easy to use, but there are a few gotchas so I&rsquo;m going to give you a rundown of exactly what I did to create the level.</p><p>First, open Tiled and choose New Map… You&rsquo;ll get a screen that looks a bit like this:</p><p>[image placeholder]</p><p>For this level I&rsquo;m going to make a relatively small map. This makes debugging player behavior easier since you can transverse the entirety of the level quickly. The important values here are that is is an Orthagonal map with a height of 20 and a Tile size of 32 by 32. When you save, create a new folder in <code>/assets</code> called <code>/levels</code>. I saved mine as <strong>level_1</strong>.</p><p>Second, load the tileset by clicking the little New Tileset icon in the bottom right of the screen. You should get a popup. Fill out the settings so it looks like this:</p><p>[image placeholder]</p><p>Third, we need to add a custom property to some tiles so that we can handle our collisions. Choose the tileset you&rsquo;ve just imported and click the document with a wrench on it. This will bring up the tileset editor. In this editor, select every tile you want to be impassable and create a new Custom Property on the left side called &ldquo;collidable.&rdquo; Set the type to &ldquo;bool&rdquo; and the value to true. For the tiles you can pass through, just leave them alone. For me, the final product looks like this:</p><p>[image placeholder]</p><p>Note that I didn&rsquo;t make those little bits above the rocks collidable. The evel! For now, try a couple long platforms towards the bottom of the level. We need to fix our player in part 4 before we get too complicated.</p><p>Fifth, export your level. Go up to the File menu, choose Export As, make sure the file type is .lua and save the exported file into <code>/assets/levels</code>.</p><h2 id=2-coding-our-base-class>2. Coding Our Base Class.
+<a class=anchor href=#2-coding-our-base-class>#</a></h2><p>At some point we&rsquo;ll want a lot of level in our game and since they&rsquo;ll all be the levels of a platformer we&rsquo;ll want a way to separate out common code &ndash; such as loading our Tiled maps. Create an empty file in <code>/gamestates</code> called LevelBase.lua. We&rsquo;ll move whatever common code we can to this file. Let&rsquo;s revisit <code>gameLevel1.lua</code>. In that file we have a couple of entities, ground and player, plus our bump library. In this tutorial we&rsquo;ll be adding level loading and a camera. Entities will change but the Entity system will not. So our common code will include the Entity system, bump library (collision handling), level loading, and our camera. This frees up gameLevel# files to include only the logic specific to that particular level.</p><p>We&rsquo;ll be using
+<a href=https://github.com/karai17/Simple-Tiled-Implementation rel=noopener>Simple Tiled Implementation</a> (or STI) by karai17. Add that to your libs folder by whichever method you prefer.</p><p>Now we&rsquo;re ready for to program our LevelBase. In that file put:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Each level will inherit from this class which itself inherits from Gamestate.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- This class is Gamestate but with function for loading up Tiled maps.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> bump <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.bump.bump&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Gamestate <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.gamestate&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Class <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.class&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> sti <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.sti.sti&#39;</span> <span style=color:#75715e>-- New addition here</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Entities <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.Entities&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> camera <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.camera&#39;</span> <span style=color:#75715e>-- New addition here</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> LevelBase <span style=color:#f92672>=</span> Class{
+</span></span><span style=display:flex><span>  __includes <span style=color:#f92672>=</span> Gamestate,
+</span></span><span style=display:flex><span>  init <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(self, mapFile)
+</span></span><span style=display:flex><span>    self.map <span style=color:#f92672>=</span> sti(mapFile, { <span style=color:#e6db74>&#39;bump&#39;</span> })
+</span></span><span style=display:flex><span>    self.world <span style=color:#f92672>=</span> bump.newWorld(<span style=color:#ae81ff>32</span>)
+</span></span><span style=display:flex><span>    self.map:resize(love.graphics.getWidth(), love.graphics.getHeight())
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    self.map:bump_init(self.world)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    Entities:enter()
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>;
+</span></span><span style=display:flex><span>  Entities <span style=color:#f92672>=</span> Entities;
+</span></span><span style=display:flex><span>  camera <span style=color:#f92672>=</span> camera
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>In this new block we tell the engine that level base inherits from Gamestate then we define a function to be run on LevelBase initialization. This function takes the location of a map file and sets up the player&rsquo;s environment. Now for the breakdown by line number:</p><ol><li><code>self.map = sti(mapFile, { 'bump' })</code> - Use sti to open our mapfile. We then tell sti that we are making use of the bump plugin for our collision handling.</li><li><code>self.world = bump.newWorld(32)</code> - Just as before, we declare a world for our collisions to occur in.</li><li><code>self.map:resize(love.graphics.getWidth(), love.graphics.getHeight())</code> - Resize the map to fill our screen.</li><li><code>self.map:bump_init(self.world)</code> - Initialize the bump library for our map.</li><li><code>Entities:enter()</code> - Create the entities system.</li><li><code>Entities = Entities;</code> - Makes Entities which we required above a class variable for easy access from anyone that inherits this LevelBase.</li></ol><p>This will allow us to simplify gameLevel1.lua, but before we do that let&rsquo;s setup our camera. Camera&rsquo;s in Love are super simple. We actually have a class already included but I found that it overcomplicated the process and actually fought with our level loader. Instead we&rsquo;re going to grab the camera from this nova-fusion tutorial:
+<a href=http://nova-fusion.com/2011/04/19/cameras-in-love2d-part-1-the-basics/ rel=noopener>Cameras in Love2d Part 1</a> I recommend you read that tutorial as well. Understanding this bit of code isn&rsquo;t strictly <em>necessary</em> but it&rsquo;s always a good idea.</p><p>Take the code from that tutorial (which I have pared down and copied below) and add it to a file in <code>/libs</code> named camera.lua.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>camera <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>camera.x <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>camera.y <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>camera</span>:<span style=color:#a6e22e>set</span>()
+</span></span><span style=display:flex><span>  love.graphics.push()
+</span></span><span style=display:flex><span>  love.graphics.translate(<span style=color:#f92672>-</span>self.x, <span style=color:#f92672>-</span>self.y)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>camera</span>:<span style=color:#a6e22e>unset</span>()
+</span></span><span style=display:flex><span>  love.graphics.pop()
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>camera</span>:<span style=color:#a6e22e>move</span>(dx, dy)
+</span></span><span style=display:flex><span>  self.x <span style=color:#f92672>=</span> self.x <span style=color:#f92672>+</span> (dx <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>  self.y <span style=color:#f92672>=</span> self.y <span style=color:#f92672>+</span> (dy <span style=color:#f92672>or</span> <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>camera</span>:<span style=color:#a6e22e>setPosition</span>(x, y)
+</span></span><span style=display:flex><span>  self.x <span style=color:#f92672>=</span> x <span style=color:#f92672>or</span> self.x
+</span></span><span style=display:flex><span>  self.y <span style=color:#f92672>=</span> y <span style=color:#f92672>or</span> self.y
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> camera
+</span></span></code></pre></div><p>We &ldquo;set&rdquo; the camera prior to drawing our graphics. This performs a translate operation that ensures we&rsquo;re drawing things in the correct position relative to our viewport. We&rsquo;ll use the setPosition function to make sure our viewport is in the proper position relative to the player.</p><p>Returning to LevelBase.lua we&rsquo;ll add our common procedures. Right now that&rsquo;s just pausing, but you could use this same concept for informational popups or other actions that appear in multiple levels.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>LevelBase</span>:<span style=color:#a6e22e>keypressed</span>(key)
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- All levels will have a pause menu</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> Gamestate.current() <span style=color:#f92672>~=</span> pause <span style=color:#f92672>and</span> key <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;p&#39;</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>    Gamestate.push(pause)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Finally, let&rsquo;s write a little code to move the camera to match the player position. This is just a tiny bit tricky, but it boils down into very little code. First, we determine the width of the level by multiplying the number of tiles in the width by the width of the tiles (that was a bit of a mouthful), then we get the width of the screen and half that to center our player. Then we check if we&rsquo;re close to the starting edge or the ending edge and use <code>Math.min</code> and <code>Math.max</code> to set the position of the camera to the closest edge or to half a screen from our player character. The whole block looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>LevelBase</span>:<span style=color:#a6e22e>positionCamera</span>(player, camera)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> mapWidth <span style=color:#f92672>=</span> self.map.width <span style=color:#f92672>*</span> self.map.tilewidth <span style=color:#75715e>-- get width in pixels</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>local</span> halfScreen <span style=color:#f92672>=</span>  love.graphics.getWidth() <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> player.x <span style=color:#f92672>&lt;</span> (mapWidth <span style=color:#f92672>-</span> halfScreen) <span style=color:#66d9ef>then</span> <span style=color:#75715e>-- use this value until we&#39;re approaching the end.</span>
+</span></span><span style=display:flex><span>    boundX <span style=color:#f92672>=</span> math.max(<span style=color:#ae81ff>0</span>, player.x <span style=color:#f92672>-</span> halfScreen) <span style=color:#75715e>-- lock camera at the left side of the screen.</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>    boundX <span style=color:#f92672>=</span> math.min(player.x <span style=color:#f92672>-</span> halfScreen, mapWidth <span style=color:#f92672>-</span> love.graphics.getWidth()) <span style=color:#75715e>-- lock camera at the right side of the screen</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  camera:setPosition(boundX, <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>To finish up this file add the return statement at the bottom.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> LevelBase
+</span></span></code></pre></div><p>Returning to <code>gameLevel1.lua</code> we remove some redundant code and add the LevelBase dependency. There is nothing <em>new</em> in this file other than the mounting and positioning of the camera - a few simple function calls. The final gameLevel1 file looks like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>-- Import our libraries.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Gamestate <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.gamestate&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Class <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.hump.class&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Grab our base class</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> LevelBase <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;gamestates.LevelBase&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Import the Entities we will build.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> Player <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;entities.player&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> camera <span style=color:#f92672>=</span> require <span style=color:#e6db74>&#39;libs.camera&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- Declare a couple immportant variables</span>
+</span></span><span style=display:flex><span>player <span style=color:#f92672>=</span> <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> gameLevel1 <span style=color:#f92672>=</span> Class{
+</span></span><span style=display:flex><span>  __includes <span style=color:#f92672>=</span> LevelBase
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>init</span>()
+</span></span><span style=display:flex><span>  LevelBase.init(self, <span style=color:#e6db74>&#39;assets/levels/level_1.lua&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>enter</span>()
+</span></span><span style=display:flex><span>  player <span style=color:#f92672>=</span> Player(self.world,  <span style=color:#ae81ff>32</span>, <span style=color:#ae81ff>64</span>)
+</span></span><span style=display:flex><span>  LevelBase.Entities:add(player)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>update</span>(dt)
+</span></span><span style=display:flex><span>  self.map:update(dt) <span style=color:#75715e>-- remember, we inherited map from LevelBase</span>
+</span></span><span style=display:flex><span>  LevelBase.Entities:update(dt) <span style=color:#75715e>-- this executes the update function for each individual Entity</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  LevelBase.positionCamera(self, player, camera)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>draw</span>()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Attach the camera before drawing the entities</span>
+</span></span><span style=display:flex><span>  camera:set()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  self.map:draw(<span style=color:#f92672>-</span>camera.x, <span style=color:#f92672>-</span>camera.y) <span style=color:#75715e>-- Remember that we inherited map from LevelBase</span>
+</span></span><span style=display:flex><span>  LevelBase.Entities:draw() <span style=color:#75715e>-- this executes the draw function for each individual Entity</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  camera:unset()
+</span></span><span style=display:flex><span>  <span style=color:#75715e>-- Be sure to detach after running to avoid weirdness</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- All levels will have a pause menu</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>gameLevel1</span>:<span style=color:#a6e22e>keypressed</span>(key)
+</span></span><span style=display:flex><span>  LevelBase:keypressed(key)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> gameLevel1
+</span></span></code></pre></div><p>That wraps up part 3! When you run the game you should see something like this:</p><p>[image placeholder]</p><p>In part 4 we&rsquo;ll make a better, more responsive player!</p><p>(20230629 - Part 4 has yet to be posted. Don&rsquo;t think it will be.)</p><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://forgetful.dev/quartz/js/graph.cbd78cfa87df7d3e230d16fc24f06548.js></script></div></div><div id=contact_buttons><footer><p>Made with <a href=https://github.com/64bitpandas/amethyst>Amethyst</a>, © 2023 Miguel Pimentel</p><ul><li><a href=https://forgetful.dev/>Home</a></li><li><a href=https://miguelpimentel.do/blog/>Blog</a></li><li><a href=https://github.com/datastring/>GitHub</a></li><li><a href=https://github.com/datastring/forgetful-notes/>Source</a></li></ul></footer></div></article><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li><li><a href=#part-3>Part 3</a></li><li><a href=#1-make-the-level>1. Make the Level</a></li><li><a href=#2-coding-our-base-class>2. Coding Our Base Class.</a></li></ul></li></ul></nav></div></aside></main></body></html>
