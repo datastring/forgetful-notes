@@ -1,4 +1,4 @@
-baseURL: https://forgetful.dev/
+baseURL: https://datastring.github.io/forgetful-notes/
 
 # Book configuration
 disablePathToLower: true
@@ -31,7 +31,7 @@ markup:
 params:
 
   name: Miguel Pimentel
-  title: 🌴Forgetful Notes🥥
+  title: Forgetful Notes
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -110,7 +110,7 @@ params:
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: https://github.com/datastring/forgetful-notes
+  BookRepo: https://github.com/datastring/not-forgetful-notes
 
   # (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
   # commit hash for 'doc' page type.
